@@ -24,7 +24,7 @@ tidy: ## Run black, isort and codespell
 
 .PHONY: mypy
 mypy: ## Run mypy
-	poetry run mypy --pretty --warn-redundant-casts --warn-unused-ignores --warn-unreachable --disallow-untyped-decorators --disallow-incomplete-defs --disallow-untyped-calls --check-untyped-defs --disallow-incomplete-defs --python-version 3.11 sdk runner --config-file pyproject.toml
+	poetry run mypy --pretty --warn-redundant-casts --warn-unused-ignores --warn-unreachable --disallow-untyped-decorators --disallow-incomplete-defs --disallow-untyped-calls --check-untyped-defs --disallow-incomplete-defs --python-version 3.13 sdk runner --config-file pyproject.toml
 
 .PHONY: update-poetries
 update-poetries: ## Update all dependencies
