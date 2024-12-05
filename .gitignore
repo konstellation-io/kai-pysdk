@@ -1,0 +1,26 @@
+.idea
+go.work
+go.work.sum
+
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+.coverage
+coverage-unit.out
+coverage-integration.out
+
+build
+.venv
+dist
+
+# python
+__pycache__/
+.pytest_cache
+.mypy_cache
+
+# OS
+.DS_Store
