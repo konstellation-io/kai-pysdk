@@ -3,13 +3,13 @@ from mock import AsyncMock, Mock, patch
 from nats.aio.client import Client as NatsClient
 from nats.js.client import JetStreamContext
 from nats.js.kv import KeyValue
-from vyper import v
-
 from runner.exceptions import FailedLoadingConfigError
 from runner.exit.exit_runner import ExitRunner
 from runner.runner import Runner
 from runner.task.task_runner import TaskRunner
 from runner.trigger.trigger_runner import TriggerRunner
+from vyper import v
+
 from sdk.centralized_config.centralized_config import CentralizedConfig
 from sdk.ephemeral_storage.ephemeral_storage import EphemeralStorage
 from sdk.kai_nats_msg_pb2 import KaiNatsMessage

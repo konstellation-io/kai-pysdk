@@ -12,9 +12,9 @@ from nats.aio.msg import Msg
 from nats.js.api import ConsumerConfig, DeliverPolicy
 from nats.js.client import JetStreamContext
 from opentelemetry.util.types import Attributes
+from runner.common.common import Handler
 from vyper import v
 
-from runner.common.common import Handler
 from sdk.messaging.messaging_utils import is_compressed, uncompress
 from sdk.metadata.metadata import Metadata
 
@@ -22,6 +22,7 @@ if TYPE_CHECKING:
     from runner.exit.exit_runner import ExitRunner
 
 from runner.exit.exceptions import HandlerError, NewRequestMsgError, NotValidProtobuf
+
 from sdk.kai_nats_msg_pb2 import KaiNatsMessage
 
 

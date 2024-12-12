@@ -5,10 +5,10 @@ import pytest
 from nats.aio.client import Client as NatsClient
 from nats.js.client import JetStreamContext
 from opentelemetry.metrics._internal.instrument import Histogram
-
 from runner.common.common import Finalizer, Initializer
 from runner.trigger.exceptions import FailedToInitializeMetricsError, UndefinedRunnerFunctionError
 from runner.trigger.trigger_runner import ResponseHandler, TriggerRunner
+
 from sdk.kai_nats_msg_pb2 import KaiNatsMessage
 from sdk.kai_sdk import KaiSDK
 from sdk.metadata.metadata import Metadata

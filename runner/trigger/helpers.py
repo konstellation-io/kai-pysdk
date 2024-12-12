@@ -5,7 +5,6 @@ from typing import TYPE_CHECKING, Optional
 
 from google.protobuf.any_pb2 import Any
 from loguru import logger
-
 from runner.common.common import Finalizer, Initializer, initialize_process_configuration
 
 if TYPE_CHECKING:

@@ -8,11 +8,11 @@ from nats.js import JetStreamContext
 from nats.js.api import ConsumerConfig, DeliverPolicy
 from nats.js.client import JetStreamContext
 from opentelemetry.metrics._internal.instrument import Histogram
-from vyper import v
-
 from runner.exit.exceptions import NewRequestMsgError
 from runner.exit.exit_runner import ExitRunner
 from runner.exit.subscriber import ExitSubscriber
+from vyper import v
+
 from sdk.kai_nats_msg_pb2 import KaiNatsMessage, MessageType
 from sdk.kai_sdk import KaiSDK
 from sdk.messaging.messaging_utils import compress

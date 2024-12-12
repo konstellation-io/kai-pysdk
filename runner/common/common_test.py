@@ -4,9 +4,9 @@ import pytest
 from nats.aio.client import Client as NatsClient
 from nats.js.client import JetStreamContext
 from nats.js.kv import KeyValue
+from runner.common.common import initialize_process_configuration
 from vyper import v
 
-from runner.common.common import initialize_process_configuration
 from sdk.centralized_config.centralized_config import CentralizedConfig
 from sdk.kai_nats_msg_pb2 import KaiNatsMessage
 from sdk.kai_sdk import KaiSDK

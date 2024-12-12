@@ -10,9 +10,9 @@ from loguru import logger
 from nats.aio.msg import Msg
 from nats.js.api import ConsumerConfig, DeliverPolicy
 from nats.js.client import JetStreamContext
+from runner.common.common import Handler
 from vyper import v
 
-from runner.common.common import Handler
 from sdk.messaging.messaging_utils import is_compressed, uncompress
 
 if TYPE_CHECKING:
@@ -21,8 +21,8 @@ if TYPE_CHECKING:
 import time
 
 from opentelemetry.util.types import Attributes
-
 from runner.task.exceptions import HandlerError, NewRequestMsgError, NotValidProtobuf
+
 from sdk.kai_nats_msg_pb2 import KaiNatsMessage
 from sdk.metadata.metadata import Metadata
 

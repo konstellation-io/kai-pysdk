@@ -4,11 +4,11 @@ import pytest
 from nats.aio.client import Client as NatsClient
 from nats.js.client import JetStreamContext
 from opentelemetry.metrics._internal.instrument import Histogram
-
 from runner.common.common import Finalizer, Handler, Initializer
 from runner.task.exceptions import FailedToInitializeMetricsError, UndefinedDefaultHandlerFunctionError
 from runner.task.subscriber import TaskSubscriber
 from runner.task.task_runner import Postprocessor, Preprocessor, TaskRunner
+
 from sdk.kai_nats_msg_pb2 import KaiNatsMessage
 from sdk.kai_sdk import KaiSDK
 from sdk.metadata.metadata import Metadata

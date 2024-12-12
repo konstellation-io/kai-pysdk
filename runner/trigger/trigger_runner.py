@@ -14,11 +14,11 @@ from loguru import logger
 from nats.aio.client import Client as NatsClient
 from nats.js.client import JetStreamContext
 from opentelemetry.metrics._internal.instrument import Histogram
-
 from runner.common.common import Finalizer, Initializer
 from runner.trigger.exceptions import FailedToInitializeMetricsError, UndefinedRunnerFunctionError
 from runner.trigger.helpers import compose_finalizer, compose_initializer, compose_runner, get_response_handler
 from runner.trigger.subscriber import TriggerSubscriber
+
 from sdk.kai_sdk import KaiSDK
 
 ResponseHandler = Callable[[KaiSDK, any_pb2.Any], Awaitable[None]]

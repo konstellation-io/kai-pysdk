@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "kai-runner"
-version = "1.0.0"
+version = "0.1.0"
 description = "KAI SDK's implementation in Python"
 authors = ["Intelygenz - KAI Team"]
 maintainers = ["Intelygenz - KAI Team"]
@@ -25,12 +25,12 @@ opentelemetry-exporter-otlp-proto-grpc = "1.23.0"
 grpcio = "1.68.1"
 
 [tool.poetry.group.dev.dependencies]
-black = "23.7.0"
+black = "24.8.0"
 pytest = "8.3.4"
 pytest-asyncio = "0.24"
 pytest-cov = "6.0.0"
 isort = "5.12.0"
-coverage = "7.2.7"
+coverage = "7.6.9"
 codespell = "2.2.5"
 ipdb = "0.13.13"
 pytest-mock = "3.14"

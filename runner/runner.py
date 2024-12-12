@@ -10,12 +10,11 @@ import loguru
 from loguru import logger
 from nats.aio.client import Client as NatsClient
 from nats.js.client import JetStreamContext
-from vyper import v
-
 from runner.exceptions import FailedLoadingConfigError, JetStreamConnectionError, NATSConnectionError
 from runner.exit.exit_runner import ExitRunner
 from runner.task.task_runner import TaskRunner
 from runner.trigger.trigger_runner import TriggerRunner
+from vyper import v
 
 LOGGER_FORMAT = (
     "<green>{time:YYYY-MM-DDTHH:mm:ss.SSS}Z</green> "

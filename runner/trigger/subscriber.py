@@ -21,8 +21,8 @@ if TYPE_CHECKING:
 import time
 
 from opentelemetry.util.types import Attributes
-
 from runner.trigger.exceptions import HandlerError, NewRequestMsgError, NotValidProtobuf, UndefinedResponseHandlerError
+
 from sdk.kai_nats_msg_pb2 import KaiNatsMessage
 from sdk.metadata.metadata import Metadata
 

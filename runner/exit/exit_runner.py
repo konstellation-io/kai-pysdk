@@ -11,7 +11,6 @@ from loguru import logger
 from nats.aio.client import Client as NatsClient
 from nats.js.client import JetStreamContext
 from opentelemetry.metrics._internal.instrument import Histogram
-
 from runner.common.common import Finalizer, Handler, Initializer, Task
 from runner.exit.exceptions import FailedToInitializeMetricsError, UndefinedDefaultHandlerFunctionError
 from runner.exit.helpers import (
@@ -22,6 +21,7 @@ from runner.exit.helpers import (
     compose_preprocessor,
 )
 from runner.exit.subscriber import ExitSubscriber
+
 from sdk.kai_sdk import KaiSDK
 
 Preprocessor = Postprocessor = Task

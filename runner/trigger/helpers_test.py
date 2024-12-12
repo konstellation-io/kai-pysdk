@@ -6,10 +6,10 @@ import pytest
 from google.protobuf.any_pb2 import Any
 from nats.aio.client import Client as NatsClient
 from nats.js.client import JetStreamContext
-from vyper import v
-
 from runner.trigger.helpers import compose_finalizer, compose_initializer, compose_runner, get_response_handler
 from runner.trigger.trigger_runner import ResponseHandler, TriggerRunner
+from vyper import v
+
 from sdk.centralized_config.centralized_config import CentralizedConfig
 from sdk.kai_nats_msg_pb2 import KaiNatsMessage
 from sdk.kai_sdk import KaiSDK
