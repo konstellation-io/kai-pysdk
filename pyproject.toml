@@ -1,14 +1,10 @@
 [tool.poetry]
-name = "kai-runner"
+name = "kaisdk"
 version = "0.1.0"
 description = "KAI SDK's implementation in Python"
 authors = ["Intelygenz - KAI Team"]
 maintainers = ["Intelygenz - KAI Team"]
-keywords = ["python", "runner", "kai"]
-packages = [
-    {include = "runner"},
-    {include = "sdk", from = "sdk"},
-]
+keywords = ["python", "kaisdk", "kai"]
 
 [tool.poetry.dependencies]
 python = "~3.13"
@@ -39,6 +35,7 @@ types-mock = "5.1.0.1"
 mypy = "1.5.1"
 types-protobuf = "4.24.0.1"
 loguru-mypy = "0.0.4"
+mypy-protobuf= "3.5.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -71,8 +68,7 @@ addopts = [
     "-W ignore::DeprecationWarning",
 ]
 testpaths = [
-    "sdk/sdk/**/*_test.py",
-    "runner/**/*_test.py",
+    "kaisdk/**/*_test.py",
 ]
 python_files = "*_test.py"
 python_classes = "Test*"

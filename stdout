@@ -1,0 +1,692 @@
+2024-12-13T13:54:02.508073+0100 ERROR failed to initialize measurements: error
+2024-12-13T13:54:02.681390+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T13:54:02.693001+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T13:54:02.724128+0100 ERROR failed to initialize model registry client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T13:54:02.727958+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T13:54:02.728125+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T13:54:02.731954+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T13:54:02.732147+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T13:54:02.735587+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T13:54:02.735818+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T13:54:02.740089+0100 ERROR model test-key already exists in model registry
+2024-12-13T13:54:02.755119+0100 ERROR model test-key with version None not found in model registry
+2024-12-13T13:54:02.755333+0100 ERROR failed to get model test-key with version None from the model registry: model test-key with version None not found
+2024-12-13T13:54:02.758294+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: ('test-key', '0.0.1')
+2024-12-13T13:54:02.761084+0100 ERROR failed to get model test-key with version None from the model registry:
+2024-12-13T13:54:02.771545+0100 ERROR failed to list models from the model registry:
+2024-12-13T13:54:02.777865+0100 ERROR failed to list models from the model registry:
+2024-12-13T13:54:02.782655+0100 ERROR model test-key does not found in model registry
+2024-12-13T13:54:02.785969+0100 ERROR failed to delete model test-key from the model registry:
+2024-12-13T13:54:02.801998+0100 ERROR failed to initialize persistent storage client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T13:54:02.811352+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T13:54:02.826173+0100 ERROR file test-key with version test-version not found in persistent storage bucket test-minio-bucket
+2024-12-13T13:54:02.828495+0100 ERROR failed to get file test-key with version test-version from the persistent storage bucket test-minio-bucket:
+2024-12-13T13:54:02.832212+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T13:54:02.838544+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T13:54:02.841122+0100 ERROR file test-key with version None does not found in persistent storage bucket test-minio-bucket
+2024-12-13T13:54:02.843406+0100 ERROR failed to delete file test-key with version None from the persistent storage bucket test-minio-bucket:
+2024-12-13T13:54:02.849107+0100 ERROR failed to list files from the persistent storage bucket test-minio-bucket:
+2024-12-13T13:54:02.856067+0100 ERROR failed to list files from persistent storage bucket test-minio-bucket:
+2024-12-13T13:54:02.873594+0100 ERROR malformed endpoint: list index out of range
+2024-12-13T13:54:02.873792+0100 ERROR failed to initialize predictions store: malformed endpoint localhost: list index out of range
+2024-12-13T13:54:02.875085+0100 ERROR failed to initialize predictions store:
+2024-12-13T13:54:02.888737+0100 ERROR failed to save prediction with test_id to the predictions store:
+2024-12-13T13:54:02.902108+0100 ERROR id is empty
+2024-12-13T13:54:02.902328+0100 ERROR failed to save prediction with  to the predictions store: id is empty
+2024-12-13T13:54:02.918276+0100 ERROR failed to get prediction test_id from the predictions store:
+2024-12-13T13:54:02.932106+0100 ERROR failed to get prediction test_id from the predictions store: Mock.keys() returned a non-iterable (type Mock)
+2024-12-13T13:54:02.946031+0100 ERROR id is empty
+2024-12-13T13:54:02.946206+0100 ERROR failed to get prediction  from the predictions store: id is empty
+2024-12-13T13:54:02.961140+0100 ERROR failed to find predictions from the predictions store matching the filter Filter(creation_date=TimestampRange(start_date=datetime.datetime(2024, 12, 13, 13, 54, 2, 960609), end_date=datetime.datetime(2024, 12, 13, 13, 54, 2, 960610)), version='test_version', workflow='test_workflow', workflow_type='test_workflow_type', process='test_process', request_id='test_request_id'): filter  is required
+2024-12-13T13:54:02.975529+0100 ERROR failed to find predictions from the predictions store matching the filter {}: 'dict' object has no attribute 'version'
+2024-12-13T13:54:02.990840+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T13:54:03.005184+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T13:54:03.005367+0100 ERROR failed to update prediction with test_id to the predictions store: prediction test_id not found in the predictions store
+2024-12-13T13:54:03.028597+0100 ERROR id is empty
+2024-12-13T13:54:03.028937+0100 ERROR failed to update prediction with  to the predictions store: id is empty
+2024-12-13T13:54:03.052408+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T13:54:03.070089+0100 ERROR failed to delete prediction test_id from the predictions store:
+2024-12-13T13:54:03.086160+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T13:54:03.086361+0100 ERROR failed to delete prediction test_id from the predictions store: prediction test_id not found in the predictions store
+2024-12-13T13:54:03.099940+0100 ERROR id is empty
+2024-12-13T13:54:03.100270+0100 ERROR failed to delete prediction  from the predictions store: id is empty
+2024-12-13T13:54:03.128010+0100 ERROR filter creation_date start_date is required
+2024-12-13T13:56:21.335391+0100 ERROR failed to initialize measurements: error
+2024-12-13T13:56:21.526206+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T13:56:21.539684+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T13:56:21.566088+0100 ERROR failed to initialize model registry client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T13:56:21.570795+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T13:56:21.571001+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T13:56:21.576357+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T13:56:21.576625+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T13:56:21.580471+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T13:56:21.580667+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T13:56:21.586592+0100 ERROR model test-key already exists in model registry
+2024-12-13T13:56:21.615072+0100 ERROR model test-key with version None not found in model registry
+2024-12-13T13:56:21.615346+0100 ERROR failed to get model test-key with version None from the model registry: model test-key with version None not found
+2024-12-13T13:56:21.618576+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: ('test-key', '0.0.1')
+2024-12-13T13:56:21.621617+0100 ERROR failed to get model test-key with version None from the model registry:
+2024-12-13T13:56:21.635717+0100 ERROR failed to list models from the model registry:
+2024-12-13T13:56:21.644674+0100 ERROR failed to list models from the model registry:
+2024-12-13T13:56:21.653405+0100 ERROR model test-key does not found in model registry
+2024-12-13T13:56:21.657721+0100 ERROR failed to delete model test-key from the model registry:
+2024-12-13T13:56:21.674883+0100 ERROR failed to initialize persistent storage client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T13:56:21.686339+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T13:56:21.701999+0100 ERROR file test-key with version test-version not found in persistent storage bucket test-minio-bucket
+2024-12-13T13:56:21.704631+0100 ERROR failed to get file test-key with version test-version from the persistent storage bucket test-minio-bucket:
+2024-12-13T13:56:21.708314+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T13:56:21.713880+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T13:56:21.717757+0100 ERROR file test-key with version None does not found in persistent storage bucket test-minio-bucket
+2024-12-13T13:56:21.720538+0100 ERROR failed to delete file test-key with version None from the persistent storage bucket test-minio-bucket:
+2024-12-13T13:56:21.726953+0100 ERROR failed to list files from the persistent storage bucket test-minio-bucket:
+2024-12-13T13:56:21.738561+0100 ERROR failed to list files from persistent storage bucket test-minio-bucket:
+2024-12-13T13:56:21.767040+0100 ERROR malformed endpoint: list index out of range
+2024-12-13T13:56:21.767374+0100 ERROR failed to initialize predictions store: malformed endpoint localhost: list index out of range
+2024-12-13T13:56:21.769946+0100 ERROR failed to initialize predictions store:
+2024-12-13T13:56:21.786314+0100 ERROR failed to save prediction with test_id to the predictions store:
+2024-12-13T13:56:21.800621+0100 ERROR id is empty
+2024-12-13T13:56:21.800819+0100 ERROR failed to save prediction with  to the predictions store: id is empty
+2024-12-13T13:56:21.819511+0100 ERROR failed to get prediction test_id from the predictions store:
+2024-12-13T13:56:21.834019+0100 ERROR failed to get prediction test_id from the predictions store: Mock.keys() returned a non-iterable (type Mock)
+2024-12-13T13:56:21.846956+0100 ERROR id is empty
+2024-12-13T13:56:21.847130+0100 ERROR failed to get prediction  from the predictions store: id is empty
+2024-12-13T13:56:21.861812+0100 ERROR failed to find predictions from the predictions store matching the filter Filter(creation_date=TimestampRange(start_date=datetime.datetime(2024, 12, 13, 13, 56, 21, 861112), end_date=datetime.datetime(2024, 12, 13, 13, 56, 21, 861114)), version='test_version', workflow='test_workflow', workflow_type='test_workflow_type', process='test_process', request_id='test_request_id'): filter  is required
+2024-12-13T13:56:21.876614+0100 ERROR failed to find predictions from the predictions store matching the filter {}: 'dict' object has no attribute 'version'
+2024-12-13T13:56:21.912261+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T13:56:21.930561+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T13:56:21.930758+0100 ERROR failed to update prediction with test_id to the predictions store: prediction test_id not found in the predictions store
+2024-12-13T13:56:21.945531+0100 ERROR id is empty
+2024-12-13T13:56:21.945735+0100 ERROR failed to update prediction with  to the predictions store: id is empty
+2024-12-13T13:56:21.961330+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T13:56:21.977101+0100 ERROR failed to delete prediction test_id from the predictions store:
+2024-12-13T13:56:21.992349+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T13:56:21.992534+0100 ERROR failed to delete prediction test_id from the predictions store: prediction test_id not found in the predictions store
+2024-12-13T13:56:22.008023+0100 ERROR id is empty
+2024-12-13T13:56:22.008234+0100 ERROR failed to delete prediction  from the predictions store: id is empty
+2024-12-13T13:56:22.037056+0100 ERROR filter creation_date start_date is required
+2024-12-13T13:57:27.028928+0100 ERROR failed to initialize measurements: error
+2024-12-13T13:57:27.206287+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T13:57:27.220824+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T13:57:27.251545+0100 ERROR failed to initialize model registry client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T13:57:27.255613+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T13:57:27.255797+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T13:57:27.259721+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T13:57:27.259876+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T13:57:27.262501+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T13:57:27.262631+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T13:57:27.267710+0100 ERROR model test-key already exists in model registry
+2024-12-13T13:57:27.280385+0100 ERROR model test-key with version None not found in model registry
+2024-12-13T13:57:27.280554+0100 ERROR failed to get model test-key with version None from the model registry: model test-key with version None not found
+2024-12-13T13:57:27.283817+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: ('test-key', '0.0.1')
+2024-12-13T13:57:27.286812+0100 ERROR failed to get model test-key with version None from the model registry:
+2024-12-13T13:57:27.294837+0100 ERROR failed to list models from the model registry:
+2024-12-13T13:57:27.301233+0100 ERROR failed to list models from the model registry:
+2024-12-13T13:57:27.306111+0100 ERROR model test-key does not found in model registry
+2024-12-13T13:57:27.308328+0100 ERROR failed to delete model test-key from the model registry:
+2024-12-13T13:57:27.323009+0100 ERROR failed to initialize persistent storage client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T13:57:27.331031+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T13:57:27.344174+0100 ERROR file test-key with version test-version not found in persistent storage bucket test-minio-bucket
+2024-12-13T13:57:27.346199+0100 ERROR failed to get file test-key with version test-version from the persistent storage bucket test-minio-bucket:
+2024-12-13T13:57:27.349776+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T13:57:27.355054+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T13:57:27.357238+0100 ERROR file test-key with version None does not found in persistent storage bucket test-minio-bucket
+2024-12-13T13:57:27.359138+0100 ERROR failed to delete file test-key with version None from the persistent storage bucket test-minio-bucket:
+2024-12-13T13:57:27.364446+0100 ERROR failed to list files from the persistent storage bucket test-minio-bucket:
+2024-12-13T13:57:27.370291+0100 ERROR failed to list files from persistent storage bucket test-minio-bucket:
+2024-12-13T13:57:27.393629+0100 ERROR malformed endpoint: list index out of range
+2024-12-13T13:57:27.393853+0100 ERROR failed to initialize predictions store: malformed endpoint localhost: list index out of range
+2024-12-13T13:57:27.396173+0100 ERROR failed to initialize predictions store:
+2024-12-13T13:57:27.417281+0100 ERROR failed to save prediction with test_id to the predictions store:
+2024-12-13T13:57:27.437225+0100 ERROR id is empty
+2024-12-13T13:57:27.437363+0100 ERROR failed to save prediction with  to the predictions store: id is empty
+2024-12-13T13:57:27.453095+0100 ERROR failed to get prediction test_id from the predictions store:
+2024-12-13T13:57:27.468889+0100 ERROR failed to get prediction test_id from the predictions store: Mock.keys() returned a non-iterable (type Mock)
+2024-12-13T13:57:27.483839+0100 ERROR id is empty
+2024-12-13T13:57:27.484085+0100 ERROR failed to get prediction  from the predictions store: id is empty
+2024-12-13T13:57:27.499272+0100 ERROR failed to find predictions from the predictions store matching the filter Filter(creation_date=TimestampRange(start_date=datetime.datetime(2024, 12, 13, 13, 57, 27, 498740), end_date=datetime.datetime(2024, 12, 13, 13, 57, 27, 498744)), version='test_version', workflow='test_workflow', workflow_type='test_workflow_type', process='test_process', request_id='test_request_id'): filter  is required
+2024-12-13T13:57:27.513194+0100 ERROR failed to find predictions from the predictions store matching the filter {}: 'dict' object has no attribute 'version'
+2024-12-13T13:57:27.527898+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T13:57:27.541788+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T13:57:27.541934+0100 ERROR failed to update prediction with test_id to the predictions store: prediction test_id not found in the predictions store
+2024-12-13T13:57:27.556984+0100 ERROR id is empty
+2024-12-13T13:57:27.557130+0100 ERROR failed to update prediction with  to the predictions store: id is empty
+2024-12-13T13:57:27.571737+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T13:57:27.589124+0100 ERROR failed to delete prediction test_id from the predictions store:
+2024-12-13T13:57:27.606986+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T13:57:27.607134+0100 ERROR failed to delete prediction test_id from the predictions store: prediction test_id not found in the predictions store
+2024-12-13T13:57:27.623539+0100 ERROR id is empty
+2024-12-13T13:57:27.623688+0100 ERROR failed to delete prediction  from the predictions store: id is empty
+2024-12-13T13:57:27.649747+0100 ERROR filter creation_date start_date is required
+2024-12-13T13:59:53.305478+0100 ERROR failed to initialize measurements: error
+2024-12-13T13:59:53.489515+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T13:59:53.498059+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T13:59:53.519342+0100 ERROR failed to initialize model registry client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T13:59:53.523615+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T13:59:53.523791+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T13:59:53.528235+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T13:59:53.528381+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T13:59:53.530785+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T13:59:53.530882+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T13:59:53.534067+0100 ERROR model test-key already exists in model registry
+2024-12-13T13:59:53.546662+0100 ERROR model test-key with version None not found in model registry
+2024-12-13T13:59:53.546800+0100 ERROR failed to get model test-key with version None from the model registry: model test-key with version None not found
+2024-12-13T13:59:53.548980+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: ('test-key', '0.0.1')
+2024-12-13T13:59:53.551148+0100 ERROR failed to get model test-key with version None from the model registry:
+2024-12-13T13:59:53.558344+0100 ERROR failed to list models from the model registry:
+2024-12-13T13:59:53.563977+0100 ERROR failed to list models from the model registry:
+2024-12-13T13:59:53.567632+0100 ERROR model test-key does not found in model registry
+2024-12-13T13:59:53.569521+0100 ERROR failed to delete model test-key from the model registry:
+2024-12-13T13:59:53.583773+0100 ERROR failed to initialize persistent storage client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T13:59:53.592069+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T13:59:53.604515+0100 ERROR file test-key with version test-version not found in persistent storage bucket test-minio-bucket
+2024-12-13T13:59:53.607180+0100 ERROR failed to get file test-key with version test-version from the persistent storage bucket test-minio-bucket:
+2024-12-13T13:59:53.610837+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T13:59:53.615201+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T13:59:53.617084+0100 ERROR file test-key with version None does not found in persistent storage bucket test-minio-bucket
+2024-12-13T13:59:53.618933+0100 ERROR failed to delete file test-key with version None from the persistent storage bucket test-minio-bucket:
+2024-12-13T13:59:53.624028+0100 ERROR failed to list files from the persistent storage bucket test-minio-bucket:
+2024-12-13T13:59:53.629973+0100 ERROR failed to list files from persistent storage bucket test-minio-bucket:
+2024-12-13T13:59:53.645782+0100 ERROR malformed endpoint: list index out of range
+2024-12-13T13:59:53.645933+0100 ERROR failed to initialize predictions store: malformed endpoint localhost: list index out of range
+2024-12-13T13:59:53.647167+0100 ERROR failed to initialize predictions store:
+2024-12-13T13:59:53.660951+0100 ERROR failed to save prediction with test_id to the predictions store:
+2024-12-13T13:59:53.674161+0100 ERROR id is empty
+2024-12-13T13:59:53.674320+0100 ERROR failed to save prediction with  to the predictions store: id is empty
+2024-12-13T13:59:53.689280+0100 ERROR failed to get prediction test_id from the predictions store:
+2024-12-13T13:59:53.704012+0100 ERROR failed to get prediction test_id from the predictions store: Mock.keys() returned a non-iterable (type Mock)
+2024-12-13T13:59:53.720997+0100 ERROR id is empty
+2024-12-13T13:59:53.721160+0100 ERROR failed to get prediction  from the predictions store: id is empty
+2024-12-13T13:59:53.736869+0100 ERROR failed to find predictions from the predictions store matching the filter Filter(creation_date=TimestampRange(start_date=datetime.datetime(2024, 12, 13, 13, 59, 53, 736302), end_date=datetime.datetime(2024, 12, 13, 13, 59, 53, 736305)), version='test_version', workflow='test_workflow', workflow_type='test_workflow_type', process='test_process', request_id='test_request_id'): filter  is required
+2024-12-13T13:59:53.753029+0100 ERROR failed to find predictions from the predictions store matching the filter {}: 'dict' object has no attribute 'version'
+2024-12-13T13:59:53.767130+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T13:59:53.784916+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T13:59:53.785067+0100 ERROR failed to update prediction with test_id to the predictions store: prediction test_id not found in the predictions store
+2024-12-13T13:59:53.802239+0100 ERROR id is empty
+2024-12-13T13:59:53.802384+0100 ERROR failed to update prediction with  to the predictions store: id is empty
+2024-12-13T13:59:53.819828+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T13:59:53.838000+0100 ERROR failed to delete prediction test_id from the predictions store:
+2024-12-13T13:59:53.855983+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T13:59:53.856153+0100 ERROR failed to delete prediction test_id from the predictions store: prediction test_id not found in the predictions store
+2024-12-13T13:59:53.869807+0100 ERROR id is empty
+2024-12-13T13:59:53.869989+0100 ERROR failed to delete prediction  from the predictions store: id is empty
+2024-12-13T13:59:53.899913+0100 ERROR filter creation_date start_date is required
+2024-12-13T14:00:44.468972+0100 ERROR error initializing centralized configuration:
+2024-12-13T14:00:44.595307+0100 ERROR error initializing object store:
+2024-12-13T14:00:44.608581+0100 ERROR failed to initialize measurements: error
+2024-12-13T14:00:44.776715+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T14:00:44.784556+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T14:00:44.820887+0100 ERROR failed to initialize model registry client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T14:00:44.827411+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:00:44.827958+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:00:44.835055+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:00:44.835495+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:00:44.840095+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:00:44.840493+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:00:44.846649+0100 ERROR model test-key already exists in model registry
+2024-12-13T14:00:44.859395+0100 ERROR model test-key with version None not found in model registry
+2024-12-13T14:00:44.859549+0100 ERROR failed to get model test-key with version None from the model registry: model test-key with version None not found
+2024-12-13T14:00:44.862958+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: ('test-key', '0.0.1')
+2024-12-13T14:00:44.865284+0100 ERROR failed to get model test-key with version None from the model registry:
+2024-12-13T14:00:44.874252+0100 ERROR failed to list models from the model registry:
+2024-12-13T14:00:44.883095+0100 ERROR failed to list models from the model registry:
+2024-12-13T14:00:44.888725+0100 ERROR model test-key does not found in model registry
+2024-12-13T14:00:44.891687+0100 ERROR failed to delete model test-key from the model registry:
+2024-12-13T14:00:44.906719+0100 ERROR failed to initialize persistent storage client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T14:00:44.916529+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:00:44.930510+0100 ERROR file test-key with version test-version not found in persistent storage bucket test-minio-bucket
+2024-12-13T14:00:44.932891+0100 ERROR failed to get file test-key with version test-version from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:00:44.936225+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:00:44.940547+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:00:44.943075+0100 ERROR file test-key with version None does not found in persistent storage bucket test-minio-bucket
+2024-12-13T14:00:44.945934+0100 ERROR failed to delete file test-key with version None from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:00:44.951168+0100 ERROR failed to list files from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:00:44.958038+0100 ERROR failed to list files from persistent storage bucket test-minio-bucket:
+2024-12-13T14:00:44.975198+0100 ERROR malformed endpoint: list index out of range
+2024-12-13T14:00:44.975360+0100 ERROR failed to initialize predictions store: malformed endpoint localhost: list index out of range
+2024-12-13T14:00:44.977256+0100 ERROR failed to initialize predictions store:
+2024-12-13T14:00:44.991585+0100 ERROR failed to save prediction with test_id to the predictions store:
+2024-12-13T14:00:45.005976+0100 ERROR id is empty
+2024-12-13T14:00:45.006136+0100 ERROR failed to save prediction with  to the predictions store: id is empty
+2024-12-13T14:00:45.021039+0100 ERROR failed to get prediction test_id from the predictions store:
+2024-12-13T14:00:45.036148+0100 ERROR failed to get prediction test_id from the predictions store: Mock.keys() returned a non-iterable (type Mock)
+2024-12-13T14:00:45.051460+0100 ERROR id is empty
+2024-12-13T14:00:45.051647+0100 ERROR failed to get prediction  from the predictions store: id is empty
+2024-12-13T14:00:45.067414+0100 ERROR failed to find predictions from the predictions store matching the filter Filter(creation_date=TimestampRange(start_date=datetime.datetime(2024, 12, 13, 14, 0, 45, 66858), end_date=datetime.datetime(2024, 12, 13, 14, 0, 45, 66862)), version='test_version', workflow='test_workflow', workflow_type='test_workflow_type', process='test_process', request_id='test_request_id'): filter  is required
+2024-12-13T14:00:45.081633+0100 ERROR failed to find predictions from the predictions store matching the filter {}: 'dict' object has no attribute 'version'
+2024-12-13T14:00:45.096617+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T14:00:45.110976+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T14:00:45.111130+0100 ERROR failed to update prediction with test_id to the predictions store: prediction test_id not found in the predictions store
+2024-12-13T14:00:45.124235+0100 ERROR id is empty
+2024-12-13T14:00:45.124380+0100 ERROR failed to update prediction with  to the predictions store: id is empty
+2024-12-13T14:00:45.138222+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T14:00:45.152345+0100 ERROR failed to delete prediction test_id from the predictions store:
+2024-12-13T14:00:45.166682+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T14:00:45.166872+0100 ERROR failed to delete prediction test_id from the predictions store: prediction test_id not found in the predictions store
+2024-12-13T14:00:45.180663+0100 ERROR id is empty
+2024-12-13T14:00:45.180826+0100 ERROR failed to delete prediction  from the predictions store: id is empty
+2024-12-13T14:00:45.208588+0100 ERROR filter creation_date start_date is required
+2024-12-13T14:02:16.952061+0100 ERROR error initializing centralized configuration:
+2024-12-13T14:02:17.077413+0100 ERROR error initializing object store:
+2024-12-13T14:02:17.089421+0100 ERROR failed to initialize measurements: error
+2024-12-13T14:02:17.251195+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T14:02:17.258603+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T14:02:17.284186+0100 ERROR failed to initialize model registry client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T14:02:17.287969+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:02:17.288130+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:02:17.291714+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:02:17.291885+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:02:17.294148+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:02:17.294238+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:02:17.297506+0100 ERROR model test-key already exists in model registry
+2024-12-13T14:02:17.309223+0100 ERROR model test-key with version None not found in model registry
+2024-12-13T14:02:17.309362+0100 ERROR failed to get model test-key with version None from the model registry: model test-key with version None not found
+2024-12-13T14:02:17.311507+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: ('test-key', '0.0.1')
+2024-12-13T14:02:17.313784+0100 ERROR failed to get model test-key with version None from the model registry:
+2024-12-13T14:02:17.321591+0100 ERROR failed to list models from the model registry:
+2024-12-13T14:02:17.326541+0100 ERROR failed to list models from the model registry:
+2024-12-13T14:02:17.330534+0100 ERROR model test-key does not found in model registry
+2024-12-13T14:02:17.333255+0100 ERROR failed to delete model test-key from the model registry:
+2024-12-13T14:02:17.347784+0100 ERROR failed to initialize persistent storage client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T14:02:17.356574+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:02:17.369812+0100 ERROR file test-key with version test-version not found in persistent storage bucket test-minio-bucket
+2024-12-13T14:02:17.372408+0100 ERROR failed to get file test-key with version test-version from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:02:17.376066+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:02:17.381829+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:02:17.385482+0100 ERROR file test-key with version None does not found in persistent storage bucket test-minio-bucket
+2024-12-13T14:02:17.389654+0100 ERROR failed to delete file test-key with version None from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:02:17.398069+0100 ERROR failed to list files from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:02:17.405944+0100 ERROR failed to list files from persistent storage bucket test-minio-bucket:
+2024-12-13T14:02:17.430107+0100 ERROR malformed endpoint: list index out of range
+2024-12-13T14:02:17.430327+0100 ERROR failed to initialize predictions store: malformed endpoint localhost: list index out of range
+2024-12-13T14:02:17.432985+0100 ERROR failed to initialize predictions store:
+2024-12-13T14:02:17.457085+0100 ERROR failed to save prediction with test_id to the predictions store:
+2024-12-13T14:02:17.481348+0100 ERROR id is empty
+2024-12-13T14:02:17.481768+0100 ERROR failed to save prediction with  to the predictions store: id is empty
+2024-12-13T14:02:17.504733+0100 ERROR failed to get prediction test_id from the predictions store:
+2024-12-13T14:02:17.527197+0100 ERROR failed to get prediction test_id from the predictions store: Mock.keys() returned a non-iterable (type Mock)
+2024-12-13T14:02:17.543021+0100 ERROR id is empty
+2024-12-13T14:02:17.543223+0100 ERROR failed to get prediction  from the predictions store: id is empty
+2024-12-13T14:02:17.563843+0100 ERROR failed to find predictions from the predictions store matching the filter Filter(creation_date=TimestampRange(start_date=datetime.datetime(2024, 12, 13, 14, 2, 17, 563300), end_date=datetime.datetime(2024, 12, 13, 14, 2, 17, 563305)), version='test_version', workflow='test_workflow', workflow_type='test_workflow_type', process='test_process', request_id='test_request_id'): filter  is required
+2024-12-13T14:02:17.577459+0100 ERROR failed to find predictions from the predictions store matching the filter {}: 'dict' object has no attribute 'version'
+2024-12-13T14:02:17.591038+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T14:02:17.604802+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T14:02:17.605008+0100 ERROR failed to update prediction with test_id to the predictions store: prediction test_id not found in the predictions store
+2024-12-13T14:02:17.619621+0100 ERROR id is empty
+2024-12-13T14:02:17.619765+0100 ERROR failed to update prediction with  to the predictions store: id is empty
+2024-12-13T14:02:17.633930+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T14:02:17.647717+0100 ERROR failed to delete prediction test_id from the predictions store:
+2024-12-13T14:02:17.661218+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T14:02:17.661380+0100 ERROR failed to delete prediction test_id from the predictions store: prediction test_id not found in the predictions store
+2024-12-13T14:02:17.674247+0100 ERROR id is empty
+2024-12-13T14:02:17.674380+0100 ERROR failed to delete prediction  from the predictions store: id is empty
+2024-12-13T14:02:17.707756+0100 ERROR filter creation_date start_date is required
+2024-12-13T14:02:40.749010+0100 ERROR error initializing centralized configuration:
+2024-12-13T14:02:40.885905+0100 ERROR error initializing object store:
+2024-12-13T14:02:40.991069+0100 ERROR failed to initialize measurements: error
+2024-12-13T14:02:41.155564+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T14:02:41.164138+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T14:02:41.186480+0100 ERROR failed to initialize model registry client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T14:02:41.190452+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:02:41.190648+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:02:41.194960+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:02:41.195115+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:02:41.198157+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:02:41.198299+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:02:41.201657+0100 ERROR model test-key already exists in model registry
+2024-12-13T14:02:41.215308+0100 ERROR model test-key with version None not found in model registry
+2024-12-13T14:02:41.215533+0100 ERROR failed to get model test-key with version None from the model registry: model test-key with version None not found
+2024-12-13T14:02:41.220141+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: ('test-key', '0.0.1')
+2024-12-13T14:02:41.224252+0100 ERROR failed to get model test-key with version None from the model registry:
+2024-12-13T14:02:41.236785+0100 ERROR failed to list models from the model registry:
+2024-12-13T14:02:41.247049+0100 ERROR failed to list models from the model registry:
+2024-12-13T14:02:41.254447+0100 ERROR model test-key does not found in model registry
+2024-12-13T14:02:41.258440+0100 ERROR failed to delete model test-key from the model registry:
+2024-12-13T14:02:41.276786+0100 ERROR failed to initialize persistent storage client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T14:02:41.287771+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:02:41.301422+0100 ERROR file test-key with version test-version not found in persistent storage bucket test-minio-bucket
+2024-12-13T14:02:41.303779+0100 ERROR failed to get file test-key with version test-version from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:02:41.307307+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:02:41.312066+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:02:41.314578+0100 ERROR file test-key with version None does not found in persistent storage bucket test-minio-bucket
+2024-12-13T14:02:41.316825+0100 ERROR failed to delete file test-key with version None from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:02:41.322854+0100 ERROR failed to list files from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:02:41.328772+0100 ERROR failed to list files from persistent storage bucket test-minio-bucket:
+2024-12-13T14:02:41.344760+0100 ERROR malformed endpoint: list index out of range
+2024-12-13T14:02:41.344909+0100 ERROR failed to initialize predictions store: malformed endpoint localhost: list index out of range
+2024-12-13T14:02:41.346618+0100 ERROR failed to initialize predictions store:
+2024-12-13T14:02:41.360988+0100 ERROR failed to save prediction with test_id to the predictions store:
+2024-12-13T14:02:41.374273+0100 ERROR id is empty
+2024-12-13T14:02:41.374430+0100 ERROR failed to save prediction with  to the predictions store: id is empty
+2024-12-13T14:02:41.388746+0100 ERROR failed to get prediction test_id from the predictions store:
+2024-12-13T14:02:41.403472+0100 ERROR failed to get prediction test_id from the predictions store: Mock.keys() returned a non-iterable (type Mock)
+2024-12-13T14:02:41.417651+0100 ERROR id is empty
+2024-12-13T14:02:41.417794+0100 ERROR failed to get prediction  from the predictions store: id is empty
+2024-12-13T14:02:41.432008+0100 ERROR failed to find predictions from the predictions store matching the filter Filter(creation_date=TimestampRange(start_date=datetime.datetime(2024, 12, 13, 14, 2, 41, 431416), end_date=datetime.datetime(2024, 12, 13, 14, 2, 41, 431420)), version='test_version', workflow='test_workflow', workflow_type='test_workflow_type', process='test_process', request_id='test_request_id'): filter  is required
+2024-12-13T14:02:41.446066+0100 ERROR failed to find predictions from the predictions store matching the filter {}: 'dict' object has no attribute 'version'
+2024-12-13T14:02:41.459814+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T14:02:41.473547+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T14:02:41.473702+0100 ERROR failed to update prediction with test_id to the predictions store: prediction test_id not found in the predictions store
+2024-12-13T14:02:41.488039+0100 ERROR id is empty
+2024-12-13T14:02:41.488259+0100 ERROR failed to update prediction with  to the predictions store: id is empty
+2024-12-13T14:02:41.505838+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T14:02:41.520107+0100 ERROR failed to delete prediction test_id from the predictions store:
+2024-12-13T14:02:41.534520+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T14:02:41.534660+0100 ERROR failed to delete prediction test_id from the predictions store: prediction test_id not found in the predictions store
+2024-12-13T14:02:41.549307+0100 ERROR id is empty
+2024-12-13T14:02:41.549445+0100 ERROR failed to delete prediction  from the predictions store: id is empty
+2024-12-13T14:02:41.579719+0100 ERROR filter creation_date start_date is required
+2024-12-13T14:02:54.192633+0100 ERROR error initializing centralized configuration:
+2024-12-13T14:02:54.333074+0100 ERROR error initializing object store:
+2024-12-13T14:02:54.346712+0100 ERROR failed to initialize measurements: error
+2024-12-13T14:02:54.518582+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T14:02:54.528507+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T14:02:54.553061+0100 ERROR failed to initialize model registry client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T14:02:54.557060+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:02:54.557197+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:02:54.560793+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:02:54.560898+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:02:54.564049+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:02:54.564206+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:02:54.568144+0100 ERROR model test-key already exists in model registry
+2024-12-13T14:02:54.581269+0100 ERROR model test-key with version None not found in model registry
+2024-12-13T14:02:54.581454+0100 ERROR failed to get model test-key with version None from the model registry: model test-key with version None not found
+2024-12-13T14:02:54.583932+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: ('test-key', '0.0.1')
+2024-12-13T14:02:54.586803+0100 ERROR failed to get model test-key with version None from the model registry:
+2024-12-13T14:02:54.593954+0100 ERROR failed to list models from the model registry:
+2024-12-13T14:02:54.599210+0100 ERROR failed to list models from the model registry:
+2024-12-13T14:02:54.603505+0100 ERROR model test-key does not found in model registry
+2024-12-13T14:02:54.606031+0100 ERROR failed to delete model test-key from the model registry:
+2024-12-13T14:02:54.624555+0100 ERROR failed to initialize persistent storage client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T14:02:54.637477+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:02:54.654788+0100 ERROR file test-key with version test-version not found in persistent storage bucket test-minio-bucket
+2024-12-13T14:02:54.657012+0100 ERROR failed to get file test-key with version test-version from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:02:54.660790+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:02:54.667058+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:02:54.670147+0100 ERROR file test-key with version None does not found in persistent storage bucket test-minio-bucket
+2024-12-13T14:02:54.672625+0100 ERROR failed to delete file test-key with version None from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:02:54.678364+0100 ERROR failed to list files from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:02:54.685413+0100 ERROR failed to list files from persistent storage bucket test-minio-bucket:
+2024-12-13T14:02:54.705754+0100 ERROR malformed endpoint: list index out of range
+2024-12-13T14:02:54.705915+0100 ERROR failed to initialize predictions store: malformed endpoint localhost: list index out of range
+2024-12-13T14:02:54.708109+0100 ERROR failed to initialize predictions store:
+2024-12-13T14:02:54.724445+0100 ERROR failed to save prediction with test_id to the predictions store:
+2024-12-13T14:02:54.738271+0100 ERROR id is empty
+2024-12-13T14:02:54.738453+0100 ERROR failed to save prediction with  to the predictions store: id is empty
+2024-12-13T14:02:54.752146+0100 ERROR failed to get prediction test_id from the predictions store:
+2024-12-13T14:02:54.766740+0100 ERROR failed to get prediction test_id from the predictions store: Mock.keys() returned a non-iterable (type Mock)
+2024-12-13T14:02:54.780445+0100 ERROR id is empty
+2024-12-13T14:02:54.780595+0100 ERROR failed to get prediction  from the predictions store: id is empty
+2024-12-13T14:02:54.795100+0100 ERROR failed to find predictions from the predictions store matching the filter Filter(creation_date=TimestampRange(start_date=datetime.datetime(2024, 12, 13, 14, 2, 54, 794524), end_date=datetime.datetime(2024, 12, 13, 14, 2, 54, 794528)), version='test_version', workflow='test_workflow', workflow_type='test_workflow_type', process='test_process', request_id='test_request_id'): filter  is required
+2024-12-13T14:02:54.809318+0100 ERROR failed to find predictions from the predictions store matching the filter {}: 'dict' object has no attribute 'version'
+2024-12-13T14:02:54.824520+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T14:02:54.841035+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T14:02:54.841198+0100 ERROR failed to update prediction with test_id to the predictions store: prediction test_id not found in the predictions store
+2024-12-13T14:02:54.856830+0100 ERROR id is empty
+2024-12-13T14:02:54.856977+0100 ERROR failed to update prediction with  to the predictions store: id is empty
+2024-12-13T14:02:54.872474+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T14:02:54.888272+0100 ERROR failed to delete prediction test_id from the predictions store:
+2024-12-13T14:02:54.904655+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T14:02:54.904817+0100 ERROR failed to delete prediction test_id from the predictions store: prediction test_id not found in the predictions store
+2024-12-13T14:02:54.918564+0100 ERROR id is empty
+2024-12-13T14:02:54.918711+0100 ERROR failed to delete prediction  from the predictions store: id is empty
+2024-12-13T14:02:54.946946+0100 ERROR filter creation_date start_date is required
+2024-12-13T14:03:22.847104+0100 ERROR error initializing centralized configuration:
+2024-12-13T14:03:22.974191+0100 ERROR error initializing object store:
+2024-12-13T14:03:22.986944+0100 ERROR failed to initialize measurements: error
+2024-12-13T14:03:23.151386+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T14:03:23.160313+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T14:03:23.183641+0100 ERROR failed to initialize model registry client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T14:03:23.187215+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:03:23.187355+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:03:23.191275+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:03:23.191424+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:03:23.193974+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:03:23.194183+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:03:23.198640+0100 ERROR model test-key already exists in model registry
+2024-12-13T14:03:23.213779+0100 ERROR model test-key with version None not found in model registry
+2024-12-13T14:03:23.213996+0100 ERROR failed to get model test-key with version None from the model registry: model test-key with version None not found
+2024-12-13T14:03:23.218364+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: ('test-key', '0.0.1')
+2024-12-13T14:03:23.222297+0100 ERROR failed to get model test-key with version None from the model registry:
+2024-12-13T14:03:23.232322+0100 ERROR failed to list models from the model registry:
+2024-12-13T14:03:23.237591+0100 ERROR failed to list models from the model registry:
+2024-12-13T14:03:23.242922+0100 ERROR model test-key does not found in model registry
+2024-12-13T14:03:23.245395+0100 ERROR failed to delete model test-key from the model registry:
+2024-12-13T14:03:23.259573+0100 ERROR failed to initialize persistent storage client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T14:03:23.268035+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:03:23.281903+0100 ERROR file test-key with version test-version not found in persistent storage bucket test-minio-bucket
+2024-12-13T14:03:23.284180+0100 ERROR failed to get file test-key with version test-version from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:03:23.287410+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:03:23.293081+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:03:23.295147+0100 ERROR file test-key with version None does not found in persistent storage bucket test-minio-bucket
+2024-12-13T14:03:23.297163+0100 ERROR failed to delete file test-key with version None from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:03:23.303096+0100 ERROR failed to list files from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:03:23.310973+0100 ERROR failed to list files from persistent storage bucket test-minio-bucket:
+2024-12-13T14:03:23.327661+0100 ERROR malformed endpoint: list index out of range
+2024-12-13T14:03:23.327812+0100 ERROR failed to initialize predictions store: malformed endpoint localhost: list index out of range
+2024-12-13T14:03:23.329346+0100 ERROR failed to initialize predictions store:
+2024-12-13T14:03:23.343953+0100 ERROR failed to save prediction with test_id to the predictions store:
+2024-12-13T14:03:23.357500+0100 ERROR id is empty
+2024-12-13T14:03:23.357651+0100 ERROR failed to save prediction with  to the predictions store: id is empty
+2024-12-13T14:03:23.371951+0100 ERROR failed to get prediction test_id from the predictions store:
+2024-12-13T14:03:23.385608+0100 ERROR failed to get prediction test_id from the predictions store: Mock.keys() returned a non-iterable (type Mock)
+2024-12-13T14:03:23.399956+0100 ERROR id is empty
+2024-12-13T14:03:23.400109+0100 ERROR failed to get prediction  from the predictions store: id is empty
+2024-12-13T14:03:23.414737+0100 ERROR failed to find predictions from the predictions store matching the filter Filter(creation_date=TimestampRange(start_date=datetime.datetime(2024, 12, 13, 14, 3, 23, 414032), end_date=datetime.datetime(2024, 12, 13, 14, 3, 23, 414037)), version='test_version', workflow='test_workflow', workflow_type='test_workflow_type', process='test_process', request_id='test_request_id'): filter  is required
+2024-12-13T14:03:23.428435+0100 ERROR failed to find predictions from the predictions store matching the filter {}: 'dict' object has no attribute 'version'
+2024-12-13T14:03:23.443051+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T14:03:23.457077+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T14:03:23.457230+0100 ERROR failed to update prediction with test_id to the predictions store: prediction test_id not found in the predictions store
+2024-12-13T14:03:23.471104+0100 ERROR id is empty
+2024-12-13T14:03:23.471244+0100 ERROR failed to update prediction with  to the predictions store: id is empty
+2024-12-13T14:03:23.486107+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T14:03:23.500503+0100 ERROR failed to delete prediction test_id from the predictions store:
+2024-12-13T14:03:23.514477+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T14:03:23.514664+0100 ERROR failed to delete prediction test_id from the predictions store: prediction test_id not found in the predictions store
+2024-12-13T14:03:23.529151+0100 ERROR id is empty
+2024-12-13T14:03:23.529289+0100 ERROR failed to delete prediction  from the predictions store: id is empty
+2024-12-13T14:03:23.556229+0100 ERROR filter creation_date start_date is required
+2024-12-13T14:03:33.057524+0100 ERROR error initializing centralized configuration:
+2024-12-13T14:03:33.110782+0100 ERROR error initializing object store:
+2024-12-13T14:03:33.124880+0100 ERROR failed to initialize measurements: error
+2024-12-13T14:03:33.334897+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T14:03:33.346340+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T14:03:33.375981+0100 ERROR failed to initialize model registry client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T14:03:33.380303+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:03:33.380439+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:03:33.384470+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:03:33.384622+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:03:33.387162+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:03:33.387332+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:03:33.392330+0100 ERROR model test-key already exists in model registry
+2024-12-13T14:03:33.404948+0100 ERROR model test-key with version None not found in model registry
+2024-12-13T14:03:33.405109+0100 ERROR failed to get model test-key with version None from the model registry: model test-key with version None not found
+2024-12-13T14:03:33.408319+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: ('test-key', '0.0.1')
+2024-12-13T14:03:33.410586+0100 ERROR failed to get model test-key with version None from the model registry:
+2024-12-13T14:03:33.418319+0100 ERROR failed to list models from the model registry:
+2024-12-13T14:03:33.424366+0100 ERROR failed to list models from the model registry:
+2024-12-13T14:03:33.428709+0100 ERROR model test-key does not found in model registry
+2024-12-13T14:03:33.431092+0100 ERROR failed to delete model test-key from the model registry:
+2024-12-13T14:03:33.445186+0100 ERROR failed to initialize persistent storage client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T14:03:33.453667+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:03:33.467295+0100 ERROR file test-key with version test-version not found in persistent storage bucket test-minio-bucket
+2024-12-13T14:03:33.469608+0100 ERROR failed to get file test-key with version test-version from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:03:33.473348+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:03:33.478446+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:03:33.480501+0100 ERROR file test-key with version None does not found in persistent storage bucket test-minio-bucket
+2024-12-13T14:03:33.482613+0100 ERROR failed to delete file test-key with version None from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:03:33.488268+0100 ERROR failed to list files from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:03:33.494193+0100 ERROR failed to list files from persistent storage bucket test-minio-bucket:
+2024-12-13T14:03:33.511352+0100 ERROR malformed endpoint: list index out of range
+2024-12-13T14:03:33.511513+0100 ERROR failed to initialize predictions store: malformed endpoint localhost: list index out of range
+2024-12-13T14:03:33.512795+0100 ERROR failed to initialize predictions store:
+2024-12-13T14:03:33.526940+0100 ERROR failed to save prediction with test_id to the predictions store:
+2024-12-13T14:03:33.541023+0100 ERROR id is empty
+2024-12-13T14:03:33.541164+0100 ERROR failed to save prediction with  to the predictions store: id is empty
+2024-12-13T14:03:33.555157+0100 ERROR failed to get prediction test_id from the predictions store:
+2024-12-13T14:03:33.569622+0100 ERROR failed to get prediction test_id from the predictions store: Mock.keys() returned a non-iterable (type Mock)
+2024-12-13T14:03:33.584074+0100 ERROR id is empty
+2024-12-13T14:03:33.584207+0100 ERROR failed to get prediction  from the predictions store: id is empty
+2024-12-13T14:03:33.600278+0100 ERROR failed to find predictions from the predictions store matching the filter Filter(creation_date=TimestampRange(start_date=datetime.datetime(2024, 12, 13, 14, 3, 33, 599743), end_date=datetime.datetime(2024, 12, 13, 14, 3, 33, 599747)), version='test_version', workflow='test_workflow', workflow_type='test_workflow_type', process='test_process', request_id='test_request_id'): filter  is required
+2024-12-13T14:03:33.614812+0100 ERROR failed to find predictions from the predictions store matching the filter {}: 'dict' object has no attribute 'version'
+2024-12-13T14:03:33.629031+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T14:03:33.643387+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T14:03:33.643533+0100 ERROR failed to update prediction with test_id to the predictions store: prediction test_id not found in the predictions store
+2024-12-13T14:03:33.657411+0100 ERROR id is empty
+2024-12-13T14:03:33.657546+0100 ERROR failed to update prediction with  to the predictions store: id is empty
+2024-12-13T14:03:33.671813+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T14:03:33.686888+0100 ERROR failed to delete prediction test_id from the predictions store:
+2024-12-13T14:03:33.701922+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T14:03:33.702069+0100 ERROR failed to delete prediction test_id from the predictions store: prediction test_id not found in the predictions store
+2024-12-13T14:03:33.716330+0100 ERROR id is empty
+2024-12-13T14:03:33.716463+0100 ERROR failed to delete prediction  from the predictions store: id is empty
+2024-12-13T14:03:33.744154+0100 ERROR filter creation_date start_date is required
+2024-12-13T14:05:27.641969+0100 ERROR error initializing centralized configuration:
+2024-12-13T14:05:27.650313+0100 ERROR error initializing object store:
+2024-12-13T14:05:27.664357+0100 ERROR failed to initialize measurements: error
+2024-12-13T14:05:27.874580+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T14:05:27.883153+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T14:05:27.907208+0100 ERROR failed to initialize model registry client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T14:05:27.911289+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:05:27.911424+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:05:27.915164+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:05:27.915276+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:05:27.918144+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:05:27.918260+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:05:27.921873+0100 ERROR model test-key already exists in model registry
+2024-12-13T14:05:27.934926+0100 ERROR model test-key with version None not found in model registry
+2024-12-13T14:05:27.935127+0100 ERROR failed to get model test-key with version None from the model registry: model test-key with version None not found
+2024-12-13T14:05:27.939607+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: ('test-key', '0.0.1')
+2024-12-13T14:05:27.942990+0100 ERROR failed to get model test-key with version None from the model registry:
+2024-12-13T14:05:27.949846+0100 ERROR failed to list models from the model registry:
+2024-12-13T14:05:27.956142+0100 ERROR failed to list models from the model registry:
+2024-12-13T14:05:27.960463+0100 ERROR model test-key does not found in model registry
+2024-12-13T14:05:27.962470+0100 ERROR failed to delete model test-key from the model registry:
+2024-12-13T14:05:27.977307+0100 ERROR failed to initialize persistent storage client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T14:05:27.985881+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:05:27.999473+0100 ERROR file test-key with version test-version not found in persistent storage bucket test-minio-bucket
+2024-12-13T14:05:28.002288+0100 ERROR failed to get file test-key with version test-version from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:05:28.005856+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:05:28.010348+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:05:28.012253+0100 ERROR file test-key with version None does not found in persistent storage bucket test-minio-bucket
+2024-12-13T14:05:28.014518+0100 ERROR failed to delete file test-key with version None from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:05:28.021961+0100 ERROR failed to list files from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:05:28.027078+0100 ERROR failed to list files from persistent storage bucket test-minio-bucket:
+2024-12-13T14:05:28.044189+0100 ERROR malformed endpoint: list index out of range
+2024-12-13T14:05:28.044339+0100 ERROR failed to initialize predictions store: malformed endpoint localhost: list index out of range
+2024-12-13T14:05:28.045918+0100 ERROR failed to initialize predictions store:
+2024-12-13T14:05:28.060048+0100 ERROR failed to save prediction with test_id to the predictions store:
+2024-12-13T14:05:28.074694+0100 ERROR id is empty
+2024-12-13T14:05:28.074848+0100 ERROR failed to save prediction with  to the predictions store: id is empty
+2024-12-13T14:05:28.089483+0100 ERROR failed to get prediction test_id from the predictions store:
+2024-12-13T14:05:28.104442+0100 ERROR failed to get prediction test_id from the predictions store: Mock.keys() returned a non-iterable (type Mock)
+2024-12-13T14:05:28.118064+0100 ERROR id is empty
+2024-12-13T14:05:28.118218+0100 ERROR failed to get prediction  from the predictions store: id is empty
+2024-12-13T14:05:28.132537+0100 ERROR failed to find predictions from the predictions store matching the filter Filter(creation_date=TimestampRange(start_date=datetime.datetime(2024, 12, 13, 14, 5, 28, 132050), end_date=datetime.datetime(2024, 12, 13, 14, 5, 28, 132054)), version='test_version', workflow='test_workflow', workflow_type='test_workflow_type', process='test_process', request_id='test_request_id'): filter  is required
+2024-12-13T14:05:28.147625+0100 ERROR failed to find predictions from the predictions store matching the filter {}: 'dict' object has no attribute 'version'
+2024-12-13T14:05:28.162427+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T14:05:28.177233+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T14:05:28.177407+0100 ERROR failed to update prediction with test_id to the predictions store: prediction test_id not found in the predictions store
+2024-12-13T14:05:28.192008+0100 ERROR id is empty
+2024-12-13T14:05:28.192150+0100 ERROR failed to update prediction with  to the predictions store: id is empty
+2024-12-13T14:05:28.207362+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T14:05:28.221644+0100 ERROR failed to delete prediction test_id from the predictions store:
+2024-12-13T14:05:28.236460+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T14:05:28.236635+0100 ERROR failed to delete prediction test_id from the predictions store: prediction test_id not found in the predictions store
+2024-12-13T14:05:28.250708+0100 ERROR id is empty
+2024-12-13T14:05:28.251022+0100 ERROR failed to delete prediction  from the predictions store: id is empty
+2024-12-13T14:05:28.280981+0100 ERROR filter creation_date start_date is required
+2024-12-13T14:06:05.397793+0100 ERROR failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:06:05.398078+0100 ERROR error initializing measurements: failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:06:05.439915+0100 ERROR failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:06:05.440045+0100 ERROR error initializing measurements: failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:06:11.019626+0100 ERROR failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:06:11.019798+0100 ERROR error initializing measurements: failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:06:11.061601+0100 ERROR failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:06:11.061736+0100 ERROR error initializing measurements: failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:06:11.865215+0100 ERROR failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:06:11.865462+0100 ERROR error initializing measurements: failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:06:11.956962+0100 ERROR failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:06:11.957110+0100 ERROR error initializing measurements: failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:06:12.381323+0100 ERROR error initializing centralized configuration:
+2024-12-13T14:06:12.390482+0100 ERROR error initializing object store:
+2024-12-13T14:06:12.403080+0100 ERROR failed to initialize measurements: error
+2024-12-13T14:06:12.581721+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T14:06:12.595570+0100 ERROR error creating new request message: Error parsing message
+2024-12-13T14:06:12.625094+0100 ERROR failed to initialize model registry client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T14:06:12.629293+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:06:12.629446+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:06:12.633939+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:06:12.634080+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:06:12.636199+0100 ERROR model test-key with version 0.0.1 not found in model registry
+2024-12-13T14:06:12.636306+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: model test-key with version 0.0.1 not found
+2024-12-13T14:06:12.639969+0100 ERROR model test-key already exists in model registry
+2024-12-13T14:06:12.651724+0100 ERROR model test-key with version None not found in model registry
+2024-12-13T14:06:12.651864+0100 ERROR failed to get model test-key with version None from the model registry: model test-key with version None not found
+2024-12-13T14:06:12.654082+0100 ERROR failed to get model test-key with version 0.0.1 from the model registry: ('test-key', '0.0.1')
+2024-12-13T14:06:12.656472+0100 ERROR failed to get model test-key with version None from the model registry:
+2024-12-13T14:06:12.663797+0100 ERROR failed to list models from the model registry:
+2024-12-13T14:06:12.668964+0100 ERROR failed to list models from the model registry:
+2024-12-13T14:06:12.673218+0100 ERROR model test-key does not found in model registry
+2024-12-13T14:06:12.675472+0100 ERROR failed to delete model test-key from the model registry:
+2024-12-13T14:06:12.689463+0100 ERROR failed to initialize persistent storage client: object.__new__() takes exactly one argument (the type to instantiate)
+2024-12-13T14:06:12.697912+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:06:12.710927+0100 ERROR file test-key with version test-version not found in persistent storage bucket test-minio-bucket
+2024-12-13T14:06:12.713267+0100 ERROR failed to get file test-key with version test-version from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:06:12.716240+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:06:12.719854+0100 ERROR file .kai/test-key is reserved for internal use and cannot be saved
+2024-12-13T14:06:12.721912+0100 ERROR file test-key with version None does not found in persistent storage bucket test-minio-bucket
+2024-12-13T14:06:12.724527+0100 ERROR failed to delete file test-key with version None from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:06:12.730209+0100 ERROR failed to list files from the persistent storage bucket test-minio-bucket:
+2024-12-13T14:06:12.734861+0100 ERROR failed to list files from persistent storage bucket test-minio-bucket:
+2024-12-13T14:06:12.752137+0100 ERROR malformed endpoint: list index out of range
+2024-12-13T14:06:12.752274+0100 ERROR failed to initialize predictions store: malformed endpoint localhost: list index out of range
+2024-12-13T14:06:12.753496+0100 ERROR failed to initialize predictions store:
+2024-12-13T14:06:12.767875+0100 ERROR failed to save prediction with test_id to the predictions store:
+2024-12-13T14:06:12.781836+0100 ERROR id is empty
+2024-12-13T14:06:12.781978+0100 ERROR failed to save prediction with  to the predictions store: id is empty
+2024-12-13T14:06:12.796559+0100 ERROR failed to get prediction test_id from the predictions store:
+2024-12-13T14:06:12.812008+0100 ERROR failed to get prediction test_id from the predictions store: Mock.keys() returned a non-iterable (type Mock)
+2024-12-13T14:06:12.825054+0100 ERROR id is empty
+2024-12-13T14:06:12.825266+0100 ERROR failed to get prediction  from the predictions store: id is empty
+2024-12-13T14:06:12.838997+0100 ERROR failed to find predictions from the predictions store matching the filter Filter(creation_date=TimestampRange(start_date=datetime.datetime(2024, 12, 13, 14, 6, 12, 838262), end_date=datetime.datetime(2024, 12, 13, 14, 6, 12, 838267)), version='test_version', workflow='test_workflow', workflow_type='test_workflow_type', process='test_process', request_id='test_request_id'): filter  is required
+2024-12-13T14:06:12.852282+0100 ERROR failed to find predictions from the predictions store matching the filter {}: 'dict' object has no attribute 'version'
+2024-12-13T14:06:12.866371+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T14:06:12.880607+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T14:06:12.880767+0100 ERROR failed to update prediction with test_id to the predictions store: prediction test_id not found in the predictions store
+2024-12-13T14:06:12.894868+0100 ERROR id is empty
+2024-12-13T14:06:12.895022+0100 ERROR failed to update prediction with  to the predictions store: id is empty
+2024-12-13T14:06:12.908460+0100 ERROR failed to update prediction with test_id to the predictions store:
+2024-12-13T14:06:12.922580+0100 ERROR failed to delete prediction test_id from the predictions store:
+2024-12-13T14:06:12.936598+0100 ERROR prediction test_id not found in the predictions store
+2024-12-13T14:06:12.936785+0100 ERROR failed to delete prediction test_id from the predictions store: prediction test_id not found in the predictions store
+2024-12-13T14:06:12.950649+0100 ERROR id is empty
+2024-12-13T14:06:12.950806+0100 ERROR failed to delete prediction  from the predictions store: id is empty
+2024-12-13T14:06:12.977527+0100 ERROR filter creation_date start_date is required
+2024-12-13T14:07:00.713126+0100 ERROR failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:07:00.713430+0100 ERROR error initializing measurements: failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:07:00.758787+0100 ERROR failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:07:00.758915+0100 ERROR error initializing measurements: failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:07:06.375195+0100 ERROR failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:07:06.375339+0100 ERROR error initializing measurements: failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:07:06.418039+0100 ERROR failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:07:06.418186+0100 ERROR error initializing measurements: failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:07:07.178178+0100 ERROR failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:07:07.178526+0100 ERROR error initializing measurements: failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:07:07.240207+0100 ERROR failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:07:07.240334+0100 ERROR error initializing measurements: failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:07:38.417885+0100 ERROR failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:07:38.418162+0100 ERROR error initializing measurements: failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:07:38.462659+0100 ERROR failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:07:38.462801+0100 ERROR error initializing measurements: failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:08:23.755927+0100 ERROR failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:08:23.756199+0100 ERROR error initializing measurements: failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:08:23.798755+0100 ERROR failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:08:23.798894+0100 ERROR error initializing measurements: failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:08:43.246341+0100 ERROR failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:08:43.246664+0100 ERROR error initializing measurements: failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:08:43.289327+0100 ERROR failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:08:43.289452+0100 ERROR error initializing measurements: failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:11:58.648974+0100 ERROR failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:11:58.649153+0100 ERROR error initializing measurements: failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:11:58.703318+0100 ERROR failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
+2024-12-13T14:11:58.703435+0100 ERROR error initializing measurements: failed to initialize measurements: interval value 0 is invalid                 and needs to be larger than zero and lower than infinity.
