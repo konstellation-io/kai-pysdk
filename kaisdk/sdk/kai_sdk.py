@@ -52,6 +52,7 @@ class KaiSDK:
             origin = logger._core.extra["origin"]
             self.logger = self.logger.bind(context=f"{origin}.[SDK]")
         else:
+            logger.error("logger is not provided")
             sys.exit(1)
 
         self.centralized_config = CentralizedConfig(js=self.js)

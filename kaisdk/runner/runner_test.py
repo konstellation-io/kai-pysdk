@@ -1,4 +1,5 @@
 import pytest
+from loguru import logger
 from mock import AsyncMock, Mock, patch
 from nats.aio.client import Client as NatsClient
 from nats.js.client import JetStreamContext
@@ -42,6 +43,7 @@ def m_runner(_: Mock) -> Runner:
 
     runner = Runner(nc=nc)
     runner.js = js
+    runner.logger = logger
 
     return runner
 
@@ -59,7 +61,8 @@ def m_runner(_: Mock) -> Runner:
 @patch.object(Predictions, "__new__", return_value=Mock(spec=Predictions))
 @patch.object(PersistentStorage, "__new__", return_value=Mock(spec=PersistentStorage))
 @patch.object(ModelRegistry, "__new__", return_value=Mock(spec=ModelRegistry))
-async def test_sdk_import_ok(_, __, ___, ____):
+@patch.object(Measurements, "__new__", return_value=Mock(spec=Measurements))
+async def test_sdk_import_ok(_, __, ___, ____, _____):
     nc = NatsClient()
     js = nc.jetstream()
     request_msg = KaiNatsMessage()
@@ -69,7 +72,7 @@ async def test_sdk_import_ok(_, __, ___, ____):
     v.set(WORKFLOW_BUCKET, "test_workflow")
     v.set(PROCESS_BUCKET, "test_process")
 
-    sdk = KaiSDK(nc=nc, js=js)
+    sdk = KaiSDK(nc=nc, js=js, logger=logger)
     await sdk.initialize()
     sdk.set_request_msg(request_msg)
 
@@ -165,7 +168,8 @@ async def test_runner_initialize_jetstream_ko(_):
 @patch.object(Predictions, "__new__", return_value=Mock(spec=Predictions))
 @patch.object(PersistentStorage, "__new__", return_value=Mock(spec=PersistentStorage))
 @patch.object(ModelRegistry, "__new__", return_value=Mock(spec=ModelRegistry))
-def test_get_runner_ok(_, __, ___, runner_type, runner_method, m_runner):
+@patch.object(Measurements, "__new__", return_value=Mock(spec=Measurements))
+def test_get_runner_ok(_, __, ___, ____, runner_type, runner_method, m_runner):
     result = getattr(m_runner, runner_method)()
 
     assert isinstance(result, runner_type)

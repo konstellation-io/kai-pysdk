@@ -4,6 +4,7 @@ from unittest.mock import AsyncMock, Mock, call, patch
 
 import pytest
 from google.protobuf.any_pb2 import Any
+from loguru import logger
 from nats.aio.client import Client as NatsClient
 from nats.js.client import JetStreamContext
 from vyper import v
@@ -18,6 +19,7 @@ from kaisdk.runner.task.helpers import (
 from kaisdk.sdk.centralized_config.centralized_config import CentralizedConfig
 from kaisdk.sdk.kai_nats_msg_pb2 import KaiNatsMessage
 from kaisdk.sdk.kai_sdk import KaiSDK
+from kaisdk.sdk.measurements.measurements import Measurements
 from kaisdk.sdk.model_registry.model_registry import ModelRegistry
 from kaisdk.sdk.persistent_storage.persistent_storage import PersistentStorage
 from kaisdk.sdk.predictions.store import Predictions
@@ -26,15 +28,16 @@ CENTRALIZED_CONFIG = "centralized_configuration.process.config"
 
 
 @pytest.fixture(scope="function")
+@patch.object(Measurements, "__new__", return_value=Mock(spec=Measurements))
 @patch.object(Predictions, "__new__", return_value=Mock(spec=Predictions))
 @patch.object(PersistentStorage, "__new__", return_value=Mock(spec=PersistentStorage))
 @patch.object(ModelRegistry, "__new__", return_value=Mock(spec=ModelRegistry))
-async def m_sdk(_: ModelRegistry, __: PersistentStorage, ___: Predictions) -> KaiSDK:
+async def m_sdk(_: ModelRegistry, __: PersistentStorage, ___: Predictions, ____: Measurements) -> KaiSDK:
     nc = AsyncMock(spec=NatsClient)
     js = Mock(spec=JetStreamContext)
     request_msg = KaiNatsMessage()
 
-    sdk = KaiSDK(nc=nc, js=js)
+    sdk = KaiSDK(nc=nc, js=js, logger=logger)
     sdk.set_request_msg(request_msg)
 
     return sdk

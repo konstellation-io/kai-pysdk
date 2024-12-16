@@ -1,6 +1,7 @@
 from unittest.mock import Mock, call
 
 import pytest
+from loguru import logger
 from mock import AsyncMock
 from nats.aio.client import Client as NatsClient
 from nats.js.api import ObjectInfo
@@ -61,6 +62,7 @@ def m_ephemeral_storage() -> EphemeralStorageABC:
 
     ephemeral_storage = EphemeralStorage(js=js, ephemeral_storage_name="test_object_store")
     ephemeral_storage.object_store = AsyncMock(spec=NatsObjectStore)
+    ephemeral_storage.logger = logger
 
     return ephemeral_storage
 

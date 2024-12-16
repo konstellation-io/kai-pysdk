@@ -2,6 +2,7 @@ import asyncio
 from unittest.mock import AsyncMock, Mock, patch
 
 import pytest
+from loguru import logger
 from nats.aio.client import Client as NatsClient
 from nats.js.client import JetStreamContext
 from opentelemetry.metrics._internal.instrument import Histogram
@@ -11,6 +12,7 @@ from kaisdk.runner.trigger.exceptions import FailedToInitializeMetricsError, Und
 from kaisdk.runner.trigger.trigger_runner import ResponseHandler, TriggerRunner
 from kaisdk.sdk.kai_nats_msg_pb2 import KaiNatsMessage
 from kaisdk.sdk.kai_sdk import KaiSDK
+from kaisdk.sdk.measurements.measurements import Measurements
 from kaisdk.sdk.metadata.metadata import Metadata
 from kaisdk.sdk.model_registry.model_registry import ModelRegistry
 from kaisdk.sdk.persistent_storage.persistent_storage import PersistentStorage
@@ -18,15 +20,16 @@ from kaisdk.sdk.predictions.store import Predictions
 
 
 @pytest.fixture(scope="function")
+@patch.object(Measurements, "__new__", return_value=Mock(spec=Measurements))
 @patch.object(Predictions, "__new__", return_value=Mock(spec=Predictions))
 @patch.object(PersistentStorage, "__new__", return_value=Mock(spec=PersistentStorage))
 @patch.object(ModelRegistry, "__new__", return_value=Mock(spec=ModelRegistry))
-async def m_sdk(_: ModelRegistry, __: PersistentStorage, ___: Predictions) -> KaiSDK:
+async def m_sdk(_: ModelRegistry, __: PersistentStorage, ___: Predictions, ____: Measurements) -> KaiSDK:
     nc = AsyncMock(spec=NatsClient)
     js = Mock(spec=JetStreamContext)
     request_msg = KaiNatsMessage()
 
-    sdk = KaiSDK(nc=nc, js=js)
+    sdk = KaiSDK(nc=nc, js=js, logger=logger)
     sdk.set_request_msg(request_msg)
 
     return sdk
@@ -34,16 +37,17 @@ async def m_sdk(_: ModelRegistry, __: PersistentStorage, ___: Predictions) -> Ka
 
 @pytest.fixture(scope="function")
 @patch.object(TriggerRunner, "_init_metrics")
+@patch.object(Measurements, "__new__", return_value=Mock(spec=Measurements))
 @patch.object(Predictions, "__new__", return_value=Mock(spec=Predictions))
 @patch.object(PersistentStorage, "__new__", return_value=Mock(spec=PersistentStorage))
 @patch.object(ModelRegistry, "__new__", return_value=Mock(spec=ModelRegistry))
 def m_trigger_runner(
-    _: ModelRegistry, __: PersistentStorage, ___: Predictions, ____: Mock, m_sdk: KaiSDK
+    _: ModelRegistry, __: PersistentStorage, ___: Predictions, ____: Measurements, _____: Mock, m_sdk: KaiSDK
 ) -> TriggerRunner:
     nc = AsyncMock(spec=NatsClient)
     js = Mock(spec=JetStreamContext)
 
-    trigger_runner = TriggerRunner(nc=nc, js=js)
+    trigger_runner = TriggerRunner(nc=nc, js=js, logger=logger)
 
     trigger_runner.response_handler = Mock(spec=ResponseHandler)
     trigger_runner.sdk = m_sdk
@@ -62,10 +66,11 @@ class MockAsyncio:
 
 
 @patch.object(TriggerRunner, "_init_metrics")
+@patch.object(Measurements, "__new__", return_value=Mock(spec=Measurements))
 @patch.object(Predictions, "__new__", return_value=Mock(spec=Predictions))
 @patch.object(PersistentStorage, "__new__", return_value=Mock(spec=PersistentStorage))
 @patch.object(ModelRegistry, "__new__", return_value=Mock(spec=ModelRegistry))
-def test_ok(_, __, ___, ____):
+def test_ok(_, __, ___, ____, _____):
     nc = NatsClient()
     js = nc.jetstream()
 
@@ -76,10 +81,11 @@ def test_ok(_, __, ___, ____):
 
 
 @patch.object(TriggerRunner, "_init_metrics", side_effect=FailedToInitializeMetricsError)
+@patch.object(Measurements, "__new__", return_value=Mock(spec=Measurements))
 @patch.object(Predictions, "__new__", return_value=Mock(spec=Predictions))
 @patch.object(PersistentStorage, "__new__", return_value=Mock(spec=PersistentStorage))
 @patch.object(ModelRegistry, "__new__", return_value=Mock(spec=ModelRegistry))
-def test_initializing_metrics_ko(_, __, ___, ____):
+def test_initializing_metrics_ko(_, __, ___, ____, _____):
     nc = NatsClient()
     js = nc.jetstream()
 

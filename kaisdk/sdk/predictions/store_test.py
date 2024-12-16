@@ -3,6 +3,7 @@ from datetime import datetime
 from unittest.mock import Mock, patch
 
 import pytest
+from loguru import logger
 from redis import Redis
 from vyper import v
 
@@ -40,6 +41,7 @@ def m_redis():
 @pytest.fixture
 def m_store(m_redis):
     store = Predictions()
+    store.logger = logger
     store.client = m_redis
 
     return store

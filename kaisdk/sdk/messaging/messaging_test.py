@@ -3,6 +3,7 @@ from unittest.mock import call, patch
 import pytest
 from google.protobuf.any_pb2 import Any
 from google.protobuf.message import Message
+from loguru import logger
 from mock import AsyncMock, Mock
 from nats.aio.client import Client as NatsClient
 from nats.aio.msg import Msg
@@ -30,6 +31,7 @@ def m_messaging() -> Messaging:
 
     messaging = Messaging(nc=nc, js=js)
     messaging.request_msg = request_msg
+    messaging.logger = logger
 
     return messaging
 
@@ -327,7 +329,7 @@ def test_get_request_id_ok(m_messaging):
     response = m_messaging.get_request_id(nats_message)
 
     assert response[0] == "test_request_id"
-    assert response[1] == None
+    assert response[1] is None
 
 
 def test_get_request_id_ko(m_messaging):

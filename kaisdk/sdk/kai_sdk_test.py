@@ -7,7 +7,6 @@ from nats.js.object_store import ObjectStore as NatsObjectStore
 from vyper import v
 
 from kaisdk.sdk.centralized_config.centralized_config import CentralizedConfig
-from kaisdk.sdk.centralized_config.exceptions import FailedToInitializeConfigError
 from kaisdk.sdk.ephemeral_storage.ephemeral_storage import EphemeralStorage
 from kaisdk.sdk.ephemeral_storage.exceptions import FailedToInitializeEphemeralStorageError
 from kaisdk.sdk.kai_nats_msg_pb2 import KaiNatsMessage
@@ -41,10 +40,11 @@ MEASUREMENTS_ENDPOINT_VALUE = "localhost:4317"
         AsyncMock(spec=KeyValue),
     ),
 )
+@patch.object(Measurements, "__new__", return_value=Mock(spec=Measurements))
 @patch.object(Predictions, "__new__", return_value=Mock(spec=Predictions))
 @patch.object(PersistentStorage, "__new__", return_value=Mock(spec=PersistentStorage))
 @patch.object(ModelRegistry, "__new__", return_value=Mock(spec=ModelRegistry))
-async def test_initialize_ok(_, __, ___, ____):
+async def test_initialize_ok(_, __, ___, ____, _____):
     nc = NatsClient()
     js = nc.jetstream()
     v.set(NATS_OBJECT_STORE, None)
@@ -88,10 +88,11 @@ async def test_initialize_ok(_, __, ___, ____):
 
 
 @patch.object(CentralizedConfig, "_init_kv_stores", side_effect=Exception)
+@patch.object(Measurements, "__new__", return_value=Mock(spec=Measurements))
 @patch.object(Predictions, "__new__", return_value=Mock(spec=Predictions))
 @patch.object(PersistentStorage, "__new__", return_value=Mock(spec=PersistentStorage))
 @patch.object(ModelRegistry, "__new__", return_value=Mock(spec=ModelRegistry))
-async def test_initialize_ko(_, __, ___, ____):
+async def test_initialize_ko(_, __, ___, ____, _____):
     nc = NatsClient()
     js = nc.jetstream()
     v.set(NATS_OBJECT_STORE, None)
@@ -120,10 +121,11 @@ async def test_initialize_ko(_, __, ___, ____):
         AsyncMock(spec=KeyValue),
     ),
 )
+@patch.object(Measurements, "__new__", return_value=Mock(spec=Measurements))
 @patch.object(Predictions, "__new__", return_value=Mock(spec=Predictions))
 @patch.object(PersistentStorage, "__new__", return_value=Mock(spec=PersistentStorage))
 @patch.object(ModelRegistry, "__new__", return_value=Mock(spec=ModelRegistry))
-async def test_nats_initialize_ok(_, __, ___, ____, _____):
+async def test_nats_initialize_ok(_, __, ___, ____, _____, ______):
     nc = NatsClient()
     js = nc.jetstream()
     v.set(NATS_OBJECT_STORE, "test_object_store")
@@ -154,10 +156,11 @@ async def test_nats_initialize_ok(_, __, ___, ____, _____):
 
 
 @patch.object(EphemeralStorage, "_init_object_store", side_effect=Exception)
+@patch.object(Measurements, "__new__", return_value=Mock(spec=Measurements))
 @patch.object(Predictions, "__new__", return_value=Mock(spec=Predictions))
 @patch.object(PersistentStorage, "__new__", return_value=Mock(spec=PersistentStorage))
 @patch.object(ModelRegistry, "__new__", return_value=Mock(spec=ModelRegistry))
-async def test_nats_initialize_ko(_, __, ___, ____):
+async def test_nats_initialize_ko(_, __, ___, ____, _____):
     nc = NatsClient()
     js = nc.jetstream()
     v.set(MEASUREMENTS_ENDPOINT, MEASUREMENTS_ENDPOINT_VALUE)
@@ -181,10 +184,11 @@ async def test_nats_initialize_ko(_, __, ___, ____):
         AsyncMock(spec=KeyValue),
     ),
 )
+@patch.object(Measurements, "__new__", return_value=Mock(spec=Measurements))
 @patch.object(Predictions, "__new__", return_value=Mock(spec=Predictions))
 @patch.object(PersistentStorage, "__new__", return_value=Mock(spec=PersistentStorage))
 @patch.object(ModelRegistry, "__new__", return_value=Mock(spec=ModelRegistry))
-async def test_get_request_id_ok(_, __, ___, ____):
+async def test_get_request_id_ok(_, __, ___, ____, _____):
     nc = NatsClient()
     js = nc.jetstream()
     request_msg = KaiNatsMessage(request_id="test_request_id")
@@ -218,10 +222,11 @@ async def test_get_request_id_ok(_, __, ___, ____):
         AsyncMock(spec=KeyValue),
     ),
 )
+@patch.object(Measurements, "__new__", return_value=Mock(spec=Measurements))
 @patch.object(Predictions, "__new__", return_value=Mock(spec=Predictions))
 @patch.object(PersistentStorage, "__new__", return_value=Mock(spec=PersistentStorage))
 @patch.object(ModelRegistry, "__new__", return_value=Mock(spec=ModelRegistry))
-async def test_set_request_msg_ok(_, __, ___, ____):
+async def test_set_request_msg_ok(_, __, ___, ____, _____):
     nc = NatsClient()
     js = nc.jetstream()
     request_msg = KaiNatsMessage(request_id="test_request_id")

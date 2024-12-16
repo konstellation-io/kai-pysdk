@@ -1,3 +1,5 @@
+import sys
+
 import pytest
 from loguru import logger
 
@@ -8,7 +10,7 @@ def configure_logger():
 
     logger.remove()
     logger.add(
-        "stdout",
+        sys.stdout,
         colorize=True,
         format=LOGGER_FORMAT,
         backtrace=True,
@@ -16,9 +18,7 @@ def configure_logger():
         level="ERROR",
     )
 
-    logger.configure(extra={"context": "", "metadata": {}, "origin": "[TEST]"})
-
-    logger.bind(context="[TEST]")
+    logger.configure(extra={"context": "[TEST]", "metadata": {}, "origin": "[TEST]"})
 
     yield
 

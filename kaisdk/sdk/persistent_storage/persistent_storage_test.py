@@ -4,6 +4,7 @@ from unittest.mock import Mock, patch
 
 import pytest
 import urllib3
+from loguru import logger
 from minio import Minio
 from vyper import v
 
@@ -36,6 +37,7 @@ EXPECTED_OBJECT = Object(
 @patch.object(Minio, "__new__", return_value=Mock(spec=Minio))
 def m_persistent_storage(minio_mock: Mock) -> PersistentStorageABC:
     persistent_storage = PersistentStorage()
+    persistent_storage.logger = logger
     persistent_storage.minio_client = minio_mock
     persistent_storage.minio_bucket_name = "test-minio-bucket"
 

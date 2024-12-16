@@ -20,7 +20,7 @@ tidy: ## Run black, isort and codespell
 	poetry run black kaisdk \
 	&& poetry run isort kaisdk \
 	&& poetry run codespell kaisdk -I dictionary.txt \
-	--skip="*.git,*.json,kai_nats_msg_pb2.py,.venv,*.lock,__init__.py" \
+	--skip="*.git,*.json,kai_nats_msg_pb2.py,.venv,*.lock,__init__.py"
 
 .PHONY: mypy
 mypy: ## Run mypy

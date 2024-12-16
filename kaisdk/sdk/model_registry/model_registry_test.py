@@ -3,6 +3,7 @@ from unittest.mock import Mock, patch
 
 import pytest
 import urllib3
+from loguru import logger
 from minio import Minio
 from vyper import v
 
@@ -47,6 +48,7 @@ EXPECTED_MODEL = Model(
 @patch.object(Minio, "__new__", return_value=Mock(spec=Minio))
 def m_model_registry(minio_mock: Mock) -> ModelRegistryABC:
     model_registry = ModelRegistry()
+    model_registry.logger = logger
     model_registry.minio_client = minio_mock
     model_registry.minio_bucket_name = "test-minio-bucket"
     model_registry.model_folder_name = ".kai/.model"

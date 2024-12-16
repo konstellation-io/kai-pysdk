@@ -1,6 +1,7 @@
 from unittest.mock import Mock, call
 
 import pytest
+from loguru import logger
 from mock import AsyncMock
 from nats.aio.client import Client as NatsClient
 from nats.js.client import JetStreamContext
@@ -30,6 +31,7 @@ def m_centralized_config() -> CentralizedConfig:
     centralized_config.product_kv = product_kv
     centralized_config.workflow_kv = workflow_kv
     centralized_config.process_kv = process_kv
+    centralized_config.logger = logger
 
     return centralized_config
 
