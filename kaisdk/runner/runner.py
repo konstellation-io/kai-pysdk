@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import sys
 from dataclasses import dataclass, field
+from datetime import timedelta
 from functools import reduce
 
 import loguru
@@ -11,6 +12,7 @@ from nats.aio.client import Client as NatsClient
 from nats.js.client import JetStreamContext
 from vyper import v
 
+from kaisdk.runner.common.common import LogEncoding, LogLevel
 from kaisdk.runner.exceptions import FailedLoadingConfigError, JetStreamConnectionError, NATSConnectionError
 from kaisdk.runner.task.task_runner import TaskRunner
 from kaisdk.runner.trigger.trigger_runner import TriggerRunner
@@ -98,10 +100,37 @@ def custom_sink(encoding: str, path: str):
 
 
 @dataclass
+class LoggerOptions:
+    level: LogLevel = LogLevel.WARNING
+    encoding: LogEncoding = LogEncoding.JSON
+    output_paths: list[str] = field(default_factory=lambda: ["stdout"])
+    error_output_paths: list[str] = field(default_factory=lambda: ["stderr"])
+
+
+@dataclass
+class NatsOptions:
+    ack_wait_time: timedelta = timedelta(hours=22)
+
+
+@dataclass
+class RunnerOptions:
+    logger_options: LoggerOptions = field(default_factory=LoggerOptions)
+    nats_options: NatsOptions = field(default_factory=NatsOptions)
+
+    def to_vyper(self) -> None:
+        v.set("runner.logger.level", self.logger_options.level)
+        v.set("runner.logger.encoding", self.logger_options.encoding)
+        v.set("runner.logger.output_paths", self.logger_options.output_paths)
+        v.set("runner.logger.error_output_paths", self.logger_options.error_output_paths)
+        v.set("runner.subscriber.ack_wait_time", self.nats_options.ack_wait_time.total_seconds())
+
+
+@dataclass
 class Runner:
     nc: NatsClient = NatsClient()
     js: JetStreamContext = field(init=False)
     logger: loguru.Logger = field(init=False)
+    user_options: RunnerOptions = field(default_factory=RunnerOptions)
 
     def __post_init__(self) -> None:
         self.initialize_config()
@@ -133,19 +162,6 @@ class Runner:
         v.set_env_prefix("KAI")
         v.automatic_env()
 
-        if v.is_set("APP_CONFIG_PATH"):
-            v.add_config_path(v.get_string("APP_CONFIG_PATH"))
-
-        v.set_config_name("config")
-        v.set_config_type("yaml")
-        v.add_config_path(".")
-
-        error = None
-        try:
-            v.read_in_config()
-        except Exception as e:
-            error = e
-
         v.set_config_name("app")
         v.set_config_type("yaml")
         v.add_config_path(".")
@@ -153,6 +169,7 @@ class Runner:
         if v.is_set("APP_CONFIG_PATH"):
             v.add_config_path(v.get_string("APP_CONFIG_PATH"))
 
+        error = None
         try:
             v.merge_in_config()
         except Exception as e:
@@ -161,13 +178,10 @@ class Runner:
         if len(v.all_keys()) == 0:
             raise FailedLoadingConfigError(error)
 
+        self.user_options.to_vyper()
+
         self._validate_config(v.all_settings())
 
-        v.set_default("runner.subscriber.ack_wait_time", 22)
-        v.set_default("runner.logger.level", "INFO")
-        v.set_default("runner.logger.encoding", "json")
-        v.set_default("runner.logger.output_paths", ["stdout"])
-        v.set_default("runner.logger.error_output_paths", ["stderr"])
         v.set_default("minio.internal_folder", ".kai")
         v.set_default("model_registry.folder_name", ".models")
 
@@ -209,3 +223,23 @@ class Runner:
 
     def task_runner(self) -> TaskRunner:
         return TaskRunner(self.nc, self.js)
+
+    def with_logger_level(self, level: LogLevel):
+        self.user_options.logger_options.level = level
+        return self
+
+    def with_logger_encoding(self, encoding: LogEncoding):
+        self.user_options.logger_options.encoding = encoding
+        return self
+
+    def with_logger_output_paths(self, output_paths: list[str]):
+        self.user_options.logger_options.output_paths = output_paths
+        return self
+
+    def with_logger_error_output_paths(self, error_output_paths: list[str]):
+        self.user_options.logger_options.error_output_paths = error_output_paths
+        return self
+
+    def with_nats_ack_wait_time(self, ack_wait_time: timedelta):
+        self.user_options.nats_options.ack_wait_time = ack_wait_time
+        return self
