@@ -7,7 +7,6 @@ from nats.js.kv import KeyValue
 from vyper import v
 
 from kaisdk.runner.exceptions import FailedLoadingConfigError
-from kaisdk.runner.exit.exit_runner import ExitRunner
 from kaisdk.runner.runner import Runner
 from kaisdk.runner.task.task_runner import TaskRunner
 from kaisdk.runner.trigger.trigger_runner import TriggerRunner
@@ -163,7 +162,7 @@ async def test_runner_initialize_jetstream_ko(_):
 
 @pytest.mark.parametrize(
     "runner_type, runner_method",
-    [(TriggerRunner, "trigger_runner"), (TaskRunner, "task_runner"), (ExitRunner, "exit_runner")],
+    [(TriggerRunner, "trigger_runner"), (TaskRunner, "task_runner")],
 )
 @patch.object(Predictions, "__new__", return_value=Mock(spec=Predictions))
 @patch.object(PersistentStorage, "__new__", return_value=Mock(spec=PersistentStorage))

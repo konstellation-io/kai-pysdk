@@ -12,7 +12,6 @@ from nats.js.client import JetStreamContext
 from vyper import v
 
 from kaisdk.runner.exceptions import FailedLoadingConfigError, JetStreamConnectionError, NATSConnectionError
-from kaisdk.runner.exit.exit_runner import ExitRunner
 from kaisdk.runner.task.task_runner import TaskRunner
 from kaisdk.runner.trigger.trigger_runner import TriggerRunner
 
@@ -210,6 +209,3 @@ class Runner:
 
     def task_runner(self) -> TaskRunner:
         return TaskRunner(self.nc, self.js)
-
-    def exit_runner(self) -> ExitRunner:
-        return ExitRunner(self.nc, self.js)
