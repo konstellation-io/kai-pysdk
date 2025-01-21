@@ -36,9 +36,6 @@ def m_runner(_: Mock) -> Runner:
     js = Mock(spec=JetStreamContext)
     v.set(NATS_URL, "test_url")
     v.set("APP_CONFIG_PATH", "test_path")
-    v.set("runner.logger.output_paths", ["stdout"])
-    v.set("runner.logger.error_output_paths", ["stderr"])
-    v.set("runner.logger.level", "INFO")
 
     runner = Runner(nc=nc)
     runner.js = js
@@ -106,9 +103,6 @@ async def test_runner_ok(_):
     nc = NatsClient()
     v.set(NATS_URL, "test_url")
     v.set("APP_CONFIG_PATH", "test_path")
-    v.set("runner.logger.output_paths", ["stdout"])
-    v.set("runner.logger.error_output_paths", ["stderr"])
-    v.set("runner.logger.level", "INFO")
 
     runner = Runner(nc=nc)
 
@@ -181,7 +175,6 @@ class MockVyper:
         self.add_config_path = Mock()
         self.set_config_name = Mock()
         self.set_config_type = Mock()
-        self.read_in_config = Mock()
         self.merge_in_config = Mock()
         self.all_keys = Mock()
         self.get_string = Mock()
@@ -198,16 +191,15 @@ def test_initialize_config_ok(m_vyper, m_runner):
     m_runner.initialize_config()
 
     assert m_vyper.automatic_env.called
-    assert m_vyper.is_set.call_count == 2
-    assert m_vyper.add_config_path.call_count == 4
-    assert m_vyper.set_config_name.call_count == 2
-    assert m_vyper.set_config_type.call_count == 2
-    assert m_vyper.read_in_config.called
+    assert m_vyper.is_set.call_count == 1
+    assert m_vyper.add_config_path.call_count == 2
+    assert m_vyper.set_config_name.call_count == 1
+    assert m_vyper.set_config_type.call_count == 1
     assert m_vyper.merge_in_config.called
-    assert m_vyper.get_string.call_count == 2
+    assert m_vyper.get_string.call_count == 1
     assert m_vyper.all_keys.call_count == 1
     assert m_vyper.all_settings.call_count == 1
-    assert m_vyper.set_default.call_count == 7
+    assert m_vyper.set_default.call_count == 2
 
 
 @patch("kaisdk.runner.runner.v", return_value=MockVyper())
@@ -218,13 +210,12 @@ def test_initialize_config_no_config_ko(m_vyper, m_runner):
         m_runner.initialize_config()
 
         assert m_vyper.automatic_env.called
-        assert m_vyper.is_set.call_count == 2
-        assert m_vyper.add_config_path.call_count == 2
-        assert m_vyper.set_config_name.call_count == 2
-        assert m_vyper.set_config_type.call_count == 2
-        assert m_vyper.read_in_config.called
+        assert m_vyper.is_set.call_count == 1
+        assert m_vyper.add_config_path.call_count == 0
+        assert m_vyper.set_config_name.call_count == 1
+        assert m_vyper.set_config_type.call_count == 1
         assert m_vyper.merge_in_config.called
-        assert m_vyper.get_string.call_count == 2
+        assert m_vyper.get_string.call_count == 1
         assert m_vyper.all_keys.call_count == 1
         assert m_vyper.all_settings.call_count == 0
 
@@ -240,11 +231,10 @@ def test_initialize_config_read_in_config_merge_in_config_ko(m_vyper, m_runner):
         m_runner.initialize_config()
 
         assert m_vyper.automatic_env.called
-        assert m_vyper.is_set.call_count == 2
-        assert m_vyper.add_config_path.call_count == 2
-        assert m_vyper.set_config_name.call_count == 2
-        assert m_vyper.set_config_type.call_count == 2
-        assert m_vyper.read_in_config.called
+        assert m_vyper.is_set.call_count == 1
+        assert m_vyper.add_config_path.call_count == 1
+        assert m_vyper.set_config_name.call_count == 1
+        assert m_vyper.set_config_type.call_count == 1
         assert m_vyper.merge_in_config.called
         assert m_vyper.all_keys.call_count == 1
         assert m_vyper.all_settings.call_count == 0
@@ -259,15 +249,14 @@ def test_initialize_config_read_one_exception_ok(m_vyper, m_runner):
     m_runner.initialize_config()
 
     assert m_vyper.automatic_env.called
-    assert m_vyper.is_set.call_count == 2
-    assert m_vyper.add_config_path.call_count == 2
-    assert m_vyper.set_config_name.call_count == 2
-    assert m_vyper.set_config_type.call_count == 2
-    assert m_vyper.read_in_config.called
+    assert m_vyper.is_set.call_count == 1
+    assert m_vyper.add_config_path.call_count == 1
+    assert m_vyper.set_config_name.call_count == 1
+    assert m_vyper.set_config_type.call_count == 1
     assert m_vyper.merge_in_config.called
     assert m_vyper.all_keys.call_count == 1
     assert m_vyper.all_settings.call_count == 1
-    assert m_vyper.set_default.call_count == 7
+    assert m_vyper.set_default.call_count == 2
 
 
 @patch("kaisdk.runner.runner.v", return_value=MockVyper())
@@ -280,11 +269,10 @@ def test_missing_configuration_key_ko(_, m_vyper, m_runner):
         m_runner.initialize_config()
 
         assert m_vyper.automatic_env.called
-        assert m_vyper.is_set.call_count == 2
+        assert m_vyper.is_set.call_count == 1
         assert m_vyper.add_config_path.call_count == 2
         assert m_vyper.set_config_name.call_count == 2
         assert m_vyper.set_config_type.call_count == 2
-        assert m_vyper.read_in_config.called
         assert m_vyper.merge_in_config.called
         assert m_vyper.all_keys.call_count == 1
         assert m_vyper.all_settings.call_count == 1

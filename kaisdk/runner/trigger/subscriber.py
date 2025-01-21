@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import asyncio
 from dataclasses import dataclass, field
-from datetime import timedelta
 from typing import TYPE_CHECKING
 from uuid import uuid4
 
@@ -46,7 +45,7 @@ class TriggerSubscriber:
         input_subjects = v.get("nats.inputs")
         process = self.trigger_runner.sdk.metadata.get_process().replace(".", "-").replace(" ", "-")
 
-        ack_wait_time = timedelta(hours=v.get_int("runner.subscriber.ack_wait_time"))
+        ack_wait = v.get_float("runner.subscriber.ack_wait")
         if isinstance(input_subjects, str):
             input_subjects = input_subjects.replace(" ", "").split(",")
         if isinstance(input_subjects, list):
@@ -60,7 +59,7 @@ class TriggerSubscriber:
                         subject=subject,
                         durable=consumer_name + str(uuid4()),
                         cb=self._process_message,
-                        config=ConsumerConfig(deliver_policy=DeliverPolicy.NEW, ack_wait=ack_wait_time.total_seconds()),
+                        config=ConsumerConfig(deliver_policy=DeliverPolicy.NEW, ack_wait=ack_wait),
                         manual_ack=True,
                     )
                 except Exception as e:

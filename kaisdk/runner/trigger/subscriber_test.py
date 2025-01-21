@@ -1,3 +1,4 @@
+from datetime import timedelta
 from unittest.mock import AsyncMock, Mock, call, patch
 
 import mock
@@ -27,9 +28,8 @@ NATS_INPUT = "nats.inputs"
 SUBJECT = "test.subject"
 SUBJECT_LIST = [SUBJECT, "test.subject2"]
 SUBJECT_LIST_STR = ",".join(SUBJECT_LIST)
-ACK_TIME_KEY = "runner.subscriber.ack_wait_time"
-ACK_HOURS = 22
-ACK_TIME_SECONDS = float(ACK_HOURS * 3600)
+ACK_WAIT_KEY = "runner.subscriber.ack_wait"
+ACK_WAIT = timedelta(hours=22).total_seconds()
 PROCESS = "test process id"
 
 
@@ -91,7 +91,7 @@ def m_msg() -> Msg:
 async def test_start_ok_str_input(m_trigger_subscriber):
     v.set(NATS_INPUT, SUBJECT)
     consumer_name = f"{SUBJECT.replace('.', '-')}-test-process-id"
-    v.set(ACK_TIME_KEY, ACK_HOURS)
+    v.set(ACK_WAIT_KEY, ACK_WAIT)
     m_trigger_subscriber.trigger_runner.sdk.metadata.get_process = Mock(return_value=PROCESS)
     cb_mock = m_trigger_subscriber._process_message = AsyncMock()
     m_trigger_subscriber.trigger_runner.js.subscribe = AsyncMock()
@@ -103,7 +103,7 @@ async def test_start_ok_str_input(m_trigger_subscriber):
         subject=SUBJECT,
         durable=mock.ANY,
         cb=cb_mock,
-        config=ConsumerConfig(deliver_policy=DeliverPolicy.NEW, ack_wait=ACK_TIME_SECONDS),
+        config=ConsumerConfig(deliver_policy=DeliverPolicy.NEW, ack_wait=ACK_WAIT),
         manual_ack=True,
     )
     assert isinstance(
@@ -114,7 +114,7 @@ async def test_start_ok_str_input(m_trigger_subscriber):
 
 async def test_start_ok_list_input(m_trigger_subscriber):
     v.set(NATS_INPUT, SUBJECT_LIST)
-    v.set(ACK_TIME_KEY, ACK_HOURS)
+    v.set(ACK_WAIT_KEY, ACK_WAIT)
     m_trigger_subscriber.trigger_runner.sdk.metadata.get_process = Mock(return_value=PROCESS)
     cb_mock = m_trigger_subscriber._process_message = AsyncMock()
     m_trigger_subscriber.trigger_runner.js.subscribe = AsyncMock()
@@ -129,14 +129,14 @@ async def test_start_ok_list_input(m_trigger_subscriber):
             subject=SUBJECT_LIST[0],
             durable=mock.ANY,
             cb=cb_mock,
-            config=ConsumerConfig(deliver_policy=DeliverPolicy.NEW, ack_wait=ACK_TIME_SECONDS),
+            config=ConsumerConfig(deliver_policy=DeliverPolicy.NEW, ack_wait=ACK_WAIT),
             manual_ack=True,
         ),
         call(
             subject=SUBJECT_LIST[1],
             durable=mock.ANY,
             cb=cb_mock,
-            config=ConsumerConfig(deliver_policy=DeliverPolicy.NEW, ack_wait=ACK_TIME_SECONDS),
+            config=ConsumerConfig(deliver_policy=DeliverPolicy.NEW, ack_wait=ACK_WAIT),
             manual_ack=True,
         ),
     ]
@@ -155,7 +155,7 @@ async def test_start_ok_list_input(m_trigger_subscriber):
 async def test_start_ok_str_list_input(m_trigger_subscriber):
     v.set(NATS_INPUT, SUBJECT_LIST_STR)
     input_subjects = SUBJECT_LIST_STR.replace(" ", "").split(",")
-    v.set(ACK_TIME_KEY, ACK_HOURS)
+    v.set(ACK_WAIT_KEY, ACK_WAIT)
     m_trigger_subscriber.trigger_runner.sdk.metadata.get_process = Mock(return_value=PROCESS)
     cb_mock = m_trigger_subscriber._process_message = AsyncMock()
     m_trigger_subscriber.trigger_runner.js.subscribe = AsyncMock()
@@ -170,14 +170,14 @@ async def test_start_ok_str_list_input(m_trigger_subscriber):
             subject=input_subjects[0],
             durable=mock.ANY,
             cb=cb_mock,
-            config=ConsumerConfig(deliver_policy=DeliverPolicy.NEW, ack_wait=ACK_TIME_SECONDS),
+            config=ConsumerConfig(deliver_policy=DeliverPolicy.NEW, ack_wait=ACK_WAIT),
             manual_ack=True,
         ),
         call(
             subject=input_subjects[1],
             durable=mock.ANY,
             cb=cb_mock,
-            config=ConsumerConfig(deliver_policy=DeliverPolicy.NEW, ack_wait=ACK_TIME_SECONDS),
+            config=ConsumerConfig(deliver_policy=DeliverPolicy.NEW, ack_wait=ACK_WAIT),
             manual_ack=True,
         ),
     ]
@@ -195,7 +195,7 @@ async def test_start_ok_str_list_input(m_trigger_subscriber):
 
 async def test_start_nats_subscribing_ko(m_trigger_subscriber):
     v.set(NATS_INPUT, [SUBJECT])
-    v.set(ACK_TIME_KEY, ACK_HOURS)
+    v.set(ACK_WAIT_KEY, ACK_WAIT)
     m_trigger_subscriber.trigger_runner.js.subscribe = AsyncMock(side_effect=Exception("Subscription error"))
 
     with pytest.raises(SystemExit):

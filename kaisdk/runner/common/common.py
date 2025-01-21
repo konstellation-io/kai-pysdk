@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from enum import StrEnum
 from typing import Awaitable, Callable
 
 from google.protobuf.any_pb2 import Any
@@ -11,6 +12,21 @@ from kaisdk.sdk.kai_sdk import KaiSDK
 
 Initializer = Finalizer = Task = Callable[[KaiSDK], Awaitable[None] | None]
 Handler = Callable[[KaiSDK, Any], Awaitable[None] | None]
+
+
+class LogLevel(StrEnum):
+    TRACE = "TRACE"
+    DEBUG = "DEBUG"
+    INFO = "INFO"
+    SUCCESS = "SUCCESS"
+    WARNING = "WARNING"
+    ERROR = "ERROR"
+    CRITICAL = "CRITICAL"
+
+
+class LogEncoding(StrEnum):
+    JSON = "json"
+    TEXT = "text"
 
 
 async def initialize_process_configuration(sdk: KaiSDK) -> None:
