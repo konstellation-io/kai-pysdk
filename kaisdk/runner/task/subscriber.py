@@ -40,7 +40,7 @@ class TaskSubscriber:
         input_subjects = v.get("nats.inputs")
         process = self.task_runner.sdk.metadata.get_process().replace(".", "-").replace(" ", "-")
 
-        ack_wait_time = v.get_float("runner.subscriber.ack_wait_time")
+        ack_wait = v.get_float("runner.subscriber.ack_wait")
         if isinstance(input_subjects, str):
             input_subjects = input_subjects.replace(" ", "").split(",")
         if isinstance(input_subjects, list):
@@ -55,7 +55,7 @@ class TaskSubscriber:
                         queue=consumer_name,
                         durable=consumer_name,
                         cb=self._process_message,
-                        config=ConsumerConfig(deliver_policy=DeliverPolicy.NEW, ack_wait=ack_wait_time),
+                        config=ConsumerConfig(deliver_policy=DeliverPolicy.NEW, ack_wait=ack_wait),
                         manual_ack=True,
                     )
                 except Exception as e:

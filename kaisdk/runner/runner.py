@@ -109,7 +109,7 @@ class LoggerOptions:
 
 @dataclass
 class NatsOptions:
-    ack_wait_time: timedelta = timedelta(hours=22)
+    ack_wait: timedelta = timedelta(hours=22)
 
 
 @dataclass
@@ -122,7 +122,7 @@ class RunnerOptions:
         v.set("runner.logger.encoding", self.logger_options.encoding)
         v.set("runner.logger.output_paths", self.logger_options.output_paths)
         v.set("runner.logger.error_output_paths", self.logger_options.error_output_paths)
-        v.set("runner.subscriber.ack_wait_time", self.nats_options.ack_wait_time.total_seconds())
+        v.set("runner.subscriber.ack_wait", self.nats_options.ack_wait.total_seconds())
 
 
 @dataclass
@@ -240,6 +240,6 @@ class Runner:
         self.user_options.logger_options.error_output_paths = error_output_paths
         return self
 
-    def with_nats_ack_wait_time(self, ack_wait_time: timedelta):
-        self.user_options.nats_options.ack_wait_time = ack_wait_time
+    def with_nats_ack_wait(self, ack_wait: timedelta):
+        self.user_options.nats_options.ack_wait = ack_wait
         return self
